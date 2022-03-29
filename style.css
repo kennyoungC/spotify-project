@@ -8,10 +8,46 @@ body {
   font-family: "Tinos", serif;
   font-size: 16px;
   font-weight: 400;
-  background-color: #000;
+  background-color: #121212;
 }
 .nav__bar {
-  background-color: #121212;
+  background-color: #000;
+}
+.nav__bar div:nth-of-type(1) > div {
+  padding: 6px 0;
+}
+.nav__bar div:nth-of-type(2) > div {
+  /* padding: 6px 0; */
+}
+/* .nav__bar div:nth-of-type(3) > div {
+  padding: 6px 0;
+} */
+.nav__bar div:nth-of-type(1) > div:hover {
+  color: #fff;
+  background: rgb(55, 9, 9);
+  background: linear-gradient(
+    180deg,
+    rgba(133, 130, 130, 0.322) 36%,
+    rgb(112, 109, 109) 99%
+  );
+}
+.nav__bar div:nth-of-type(2) > div:hover {
+  color: #fff;
+  background: rgb(55, 9, 9);
+  background: linear-gradient(
+    180deg,
+    rgba(133, 130, 130, 0.322) 36%,
+    rgb(112, 109, 109) 99%
+  );
+}
+.nav__bar div:nth-of-type(3) > ul li:hover {
+  color: #fff;
+  background: rgb(55, 9, 9);
+  background: linear-gradient(
+    180deg,
+    rgba(133, 130, 130, 0.322) 36%,
+    rgb(112, 109, 109) 99%
+  );
 }
 .logo {
   width: 200px;
@@ -30,7 +66,6 @@ body {
   color: #fff;
 }
 article figure img {
-  /* max-width: 100%; */
   width: 64px;
 }
 article.main-container > article {
