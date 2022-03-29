@@ -22,7 +22,7 @@ article figure img {
   width: 64px;
 }
 article.main-container > article {
-  max-width: 10%;
+  min-width: 18%;
 }
 article.main-container > article {
 }
