@@ -21,7 +21,7 @@
   <body>
     <div class="container-fluid">
       <div class="row g-0">
-        <div class="col-2">
+        <div class="col-sm-2 d-none d-sm-block">
           <nav class="nav__bar d-flex flex-column bg-dark text-muted px-3">
             <img class="logo py-2" src="./img/Spotify_Logo_RGB_White.png" alt="spotify-logo" />
             <div class="d-flex flex-column gap-3">
@@ -47,7 +47,7 @@
                 <figure>
                   <img class="liked-img" src="./img/like songs.png" alt="" />
                 </figure>
-                <p>Liked Songs</p>
+                <p class="mb-0">Liked Songs</p>
               </div>
             </div>
             <div>
@@ -56,14 +56,14 @@
                 <li>Your Top Songs 2020</li>
                 <li>In Love With You - Erykah B..</li>
                 <li>This is Rod Stewart</li>
-                <li>FRABCHISE ft Young Thung ...</li>
+                <li>FRABCHISE ft Young Thung</li>
                 <li>Your Top Songs 2019</li>
                 <li>Palleggio</li>
                 <li>This is Joe Bonamassa</li>
                 <li>Jun19</li>
                 <li>
                   <span
-                    class="d-flex gap-2 justify-content-between align-items-center"
+                    class="d-flex gap-5 align-items-center"
                   >
                     <p class="mb-0">Jack 30th Party 2</p>
                     <i class="bi bi-people"></i>
@@ -71,7 +71,7 @@
                 </li>
                 <li>
                   <span
-                    class="d-flex gap-2 justify-content-between align-items-center"
+                    class="d-flex gap-5  align-items-center"
                   >
                     <p class="mb-0">Jack 30th Party</p>
                     <i class="bi bi-people"></i>
@@ -91,234 +91,330 @@
           </nav>
         </div>
         <!-- added the main section inside the col below -->
-        <div class="col-10">
-          <div class="px-2  background">
-          <section class="mb-3 container">
-            <h1 class="mb-2">Good morning</h1>
-            <article class="main-container d-flex justify-content-between mb-3">
-              <article class="d-flex gap-2 align-items-center">
-                <figure>
-                  <img src="./img/juice 2.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>Burning Jazz-rock</p>
-                  <p>Fusion</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img
-                    src="./img/artist-img/backstreet10.jpg"
-                    alt="album picture"
-                  />
-                </figure>
-                <div class="text-content">
-                  <p>Liked Songs</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/artist-img/curtis6.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>Metal Ballards</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/artist-img/new9.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>POST HUMAN:</p>
-                  <p>SURVIVAL.....</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/artist-img/the5.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>This Is Joe</p>
-                  <p>Bonamassa</p>
-                </div>
-              </article>
-            </article>
-
-            <article class="main-container d-flex justify-content-between">
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/artist-img/janis7.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>Midian</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/artist-img/the4.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>Nymphetamine</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/trippie red.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>amo</p>
-                </div>
-              </article>
-              <article class="d-flex  gap-2 align-items-center">
-                <figure>
-                  <img
-                    src="./img/artist-img/backstreet10.jpg"
-                    alt="album picture"
-                  />
-                </figure>
-                <div class="text-content">
-                  <p>Le Bask</p>
-                </div>
-              </article>
-              <article class="d-flex gap-2 align-items-center ">
-                <figure>
-                  <img src="./img/artist-img/aretha8.jpg" alt="album picture" />
-                </figure>
-                <div class="text-content">
-                  <p>Opeth</p>
-                </div>
-              </article>
-            </article>
-          </section>
-
-          <section class="container">
-            <div class="d-flex justify-content-between">
-              <h1>Recently played</h1>
-              <h4>See all</h4>
-            </div>
-            <article class="middle-container d-flex">
-              <article class="music-content">
-                <div class="sample">
-                <figure>
-                  <img src="./img/artist-img/the5.jpg" alt="album picture" class="img-fluid" />
-                </figure>
-                
-                <figcaption>Burning Jazz-rock...</figcaption>
-                <p>You'll find Fiery, modern,groovy,jazz-...</p>
-                </div>
-              </article>
-              <article class="music-content">
-                <figure>
-                  <img src="./img/artist-img/janis7.jpg" alt="album picture"class="img-fluid"  />
-                </figure>
-                <figcaption>Metal Ballads</figcaption>
-                <p>A collection of the best metal ballads</p>
-              </article>
-              <article class="music-content">
-                <figure>
-                  <img src="./img/queen-live-around-the-world.jpg" alt="album picture"class="img-fluid"  />
-                </figure>
-                <figcaption>Midian</figcaption>
-                <p>Cradle of Fifth</p>
-              </article>
-              <article class="music-content">
-                <figure>
-                  <img src="./img/heart-64.svg" alt="album picture" class="img-fluid" />
-                </figure>
-                <figcaption>Liked Songs</figcaption>
-              </article>
-              <article class="music-content">
-                <figure>
-                  <img src="./img/artist-img/backstreet10.jpg" alt="album picture" class="img-fluid" />
-                </figure>
-                <figcaption>LE BASK</figcaption>
-                <p>Artist</p>
-              </article>
-              <article class="music-content">
-                <figure>
-                  <img src="./img/artist-img/abba2.jpg" alt="album picture" class="img-fluid" />
-                </figure>
-                <figcaption>POST HUMAN:S...</figcaption>
-                <p>Bring Me The Horizon</p>
-              </article>
-             
-             
-            </article>
-          </section>
-          <!---
-
-          <section class="shows-to-try container">
-            <div class="head-content">
-              <div class="sub-content">
-                <h1>Shows to try</h1>
-                <p>Podcasts we think you'll get hooked on.</p>
+        <div class="col-12 col-sm-10">
+          <div class="px-2 pb-2  background">
+          <section class="mb-5  container">
+            <div class="d-flex align-items-center justify-content-between pt-4 pb-5 ">
+              <div>
+                <span class="arrow"><i class="bi bi-chevron-left"></i></span>
+                <span class="arrow"><i class="bi bi-chevron-right"></i></span>
               </div>
-              <h4>see all</h4>
+              <figure class="d-flex align-items-center gap-2 text-light user-details">
+                <img src="./img/artist-img/laura-jones.jpg" alt="">
+                <figcaption>laura-jones... <span><i class="bi bi-caret-down-fill"></i></span></figcaption>
+              </figure>
             </div>
-            <article class="shows-box">
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/curtis6.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Il podcast di Aless...</figcaption>
-              </article>
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/the4.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Demoni Urbani</figcaption>
-              </article>
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/ice1.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Daily Cogito</figcaption>
-              </article>
+            <h1 class="mb-4">Good morning</h1>
+            <article class="main-container mb-3">
+              <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                <article class="d-flex gap-2 align-items-center">
+                  <figure>
+                    <img src="./img/juice 2.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>Burning Jazz-rock</p>
+                    <p>Fusion</p>
+                  </div>
+                </article>
+              </div>
 
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/new9.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Locanda del Drag...</figcaption>
-              </article>
-
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/the5.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Mindfulness in Vo...</figcaption>
-              </article>
-
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/george3.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Quei Due Sul Serv...</figcaption>
-              </article>
-
-              <article class="shows-content">
-                <figure>
-                  <img
+              <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img
                     src="./img/artist-img/backstreet10.jpg"
                     alt="album picture"
-                  />
-                </figure>
-                <figcaption>Power Pizza...</figcaption>
-              </article>
-
-              <article class="shows-content">
-                <figure>
-                  <img src="./img/artist-img/abba2.jpg" alt="album picture" />
-                </figure>
-                <figcaption>Mitologia: le mera...</figcaption>
-              </article>
+                    />
+                  </figure>
+                  <div class="text-content">
+                    <p>Liked Songs</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/curtis6.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>Metal Ballards</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/new9.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>POST HUMAN:</p>
+                    <p>SURVIVAL.....</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/the5.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>This Is Joe</p>
+                    <p>Bonamassa</p>
+                  </div>
+                </article>
+                </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/backstreet10.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>Where we begun</p>
+                    <p>KennyoungC</p>
+                  </div>
+                </article>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
+                  <article class="d-flex gap-2 align-items-center ">
+                    <figure>
+                      <img src="./img/artist-img/janis7.jpg" alt="album picture" />
+                    </figure>
+                    <div class="text-content">
+                      <p>Midian</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-xl-2"><article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/the4.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>Nymphetamine</p>
+                  </div>
+                </article></div>
+                <div class="d-none d-md-block col-md-4 col-xl-2"> <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/trippie red.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>amo</p>
+                  </div>
+                </article></div>
+                <div class="d-none d-md-block col-md-4 col-xl-2">
+                   <article class="d-flex  gap-2 align-items-center">
+                  <figure>
+                    <img
+                      src="./img/artist-img/backstreet10.jpg"
+                      alt="album picture"
+                    />
+                  </figure>
+                  <div class="text-content">
+                    <p>Le Bask</p>
+                  </div>
+                </article>
+              </div>
+                <div class="d-none d-md-block col-md-4 col-xl-2">
+                  <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/aretha8.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>Opeth</p>
+                  </div>
+                </article>
+              </div>
+              <div class="d-none d-md-block col-md-4 col-xl-2">
+                <article class="d-flex gap-2 align-items-center ">
+                  <figure>
+                    <img src="./img/artist-img/the4.jpg" alt="album picture" />
+                  </figure>
+                  <div class="text-content">
+                    <p>Nymphetamine</p>
+                  </div>
+                </article>
+              </div>
+            </div>
             </article>
           </section>
         </div>
-      </div>-->
-    </div>
-    </div> 
 
+          <section class="container mb-5">
+            <div class="d-flex justify-content-between text-light mb-3">
+              <h2>Recently played</h2>
+              <h4>See all</h4>
+            </div>
+            <article class="middle-container  text-light ">
+              <div class="row">
+
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/the5.jpg" alt="album picture" class="img-fluid" />
+                  </figure>
+                  
+                  <figcaption>Burning Jazz-rock...</figcaption>
+                  <p>You'll find Fiery, modern,groovy,jazz-music</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/janis7.jpg " alt="album picture"class="img-fluid round-image"  />
+                  </figure>
+                  <figcaption>Metal Ballads</figcaption>
+                  <p>A collection of the best metal ballads</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/queen-live-around-the-world.jpg" alt="album picture"class="img-fluid"  />
+                  </figure>
+                  <figcaption>Midian</figcaption>
+                  <p>Cradle of Fifth</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/like songs.png" alt="album picture" class="img-fluid" />
+                  </figure>
+                  <figcaption>Liked Songs</figcaption>
+                </article>
+              </div>
+              
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/abba2.jpg" alt="album picture" class="img-fluid" />
+                  </figure>
+                  <figcaption>POST HUMAN:S...</figcaption>
+                  <p>Bring Me The Horizon</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/queen-live-around-the-world.jpg" alt="album picture"class="img-fluid"  />
+                  </figure>
+                  <figcaption>Midian</figcaption>
+                  <p>Cradle of Fifth</p>
+                </article>
+              </div>
+              <div class="d-none d-md-block col-md-3 d-xl-none ">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/backstreet10.jpg" alt="album picture" class="img-fluid" />
+                  </figure>
+                  <figcaption>LE BASK</figcaption>
+                  <p>Artist</p>
+                </article>
+              </div>
+              <div class="d-none d-md-block col-md-3 d-xl-none">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/janis7.jpg " alt="album picture"class="img-fluid round-image"  />
+                  </figure>
+                  <figcaption>Metal Ballads</figcaption>
+                  <p>A collection of the best metal ballads</p>
+                </article>
+              </div>
+            </div>
+            </article>
+          </section>
+          <section class="container mb-5">
+            <div class="d-flex justify-content-between align-items-center text-light mb-4">
+              <div class="d-flex flex-column">
+                <h2 class="show-header">Shows to try</h2>
+                <span>podcasts we think you'll get hooked on</span>
+              </div>
+              <h4>See all</h4>
+            </div>
+            <article class="middle-container text-light ">
+              <div class="row">
+
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/curtis6.jpg" alt="album picture" />
+                  </figure>
+                  
+                  <figcaption>Il podcast di Aless...</figcaption>
+                  <p>You'll find Fiery, modern,groovy,jazz-music</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/the4.jpg" alt="album picture" />
+                  </figure>
+                  <figcaption>Demoni Urbani</figcaption>
+                  <p>A collection of the best metal ballads</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/ice1.jpg" alt="album picture" />
+                  </figure>
+                  <figcaption>Daily Cogito</figcaption>
+                  <p>Cradle of Fifth</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/new9.jpg" alt="album picture" />
+                  </figure>
+                  <figcaption>Locanda del Drag...</figcaption>
+                  <p>here comes the Horizon</p>
+                </article>
+              </div>
+              
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/george3.jpg" alt="album picture" />
+                  </figure>
+                  <figcaption>Quei Due Sul Serv...</figcaption>
+                  <p>spanish specials</p>
+                </article>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+                <article class="music-content">
+                  <figure>
+                    <img
+                      src="./img/artist-img/backstreet10.jpg"
+                      alt="album picture"
+                    />
+                  </figure>
+                  <figcaption>Power Pizza...</figcaption>
+                  <p>Cradle of Fifth</p>
+                </article>
+              </div>
+              <div class="d-none d-md-block col-md-3 d-xl-none ">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/backstreet10.jpg" alt="album picture" class="img-fluid" />
+                  </figure>
+                  <figcaption>LE BASK</figcaption>
+                  <p>Artist</p>
+                </article>
+              </div>
+              <div class="d-none d-md-block col-md-3 d-xl-none">
+                <article class="music-content">
+                  <figure>
+                    <img src="./img/artist-img/janis7.jpg " alt="album picture"class="img-fluid round-image"  />
+                  </figure>
+                  <figcaption>Metal Ballads</figcaption>
+                  <p>A collection of the best metal ballads</p>
+                </article>
+              </div>
+            </div>
+            </article>
+          </section>
+    </div> 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
