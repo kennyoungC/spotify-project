@@ -19,4 +19,32 @@ body {
 }
 .liked-img {
   width: 38px;
+/* article {
+  max-width: 100%;
+} */
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+body {
+  background-color: black;
+}
+.background {
+  background: #360808;
+  /* width: 100%; */
+}
+.main-container article .text-content p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #fff;
+}
+article figure img {
+  /* max-width: 100%; */
+  width: 64px;
+}
+article.main-container > article {
+  min-width: 18%;
+}
+article.main-container > article {
+
 }
