@@ -32,7 +32,9 @@
     <main class="container">
       <!-- <div class="text-center"> -->
       <div class="d-flex flex-column align-items-center justify-content-center">
-        <span class="fw-bold mb-3">To continue, log in to Spotify.</span>
+        <span class="fw-bold mb-3 text-center"
+          >To continue, log in to Spotify.</span
+        >
         <button
           class="facebook mb-3 d-flex align-items-center gap-3 justify-content-center bg-primary"
         >
@@ -48,21 +50,45 @@
         <section>
           <p class="or fw-bold">OR</p>
         </section>
-        <section
-          class="d-flex flex-column align-items-center justify-content-center"
-        >
-          <input type="email" placeholder="Email address or username" /><br />
-          <input type="password" placeholder="Password" />
-        </section>
-        <div class="d-flex gap-5 my-3 align-items-center">
-          <div class="d-flex align-items-center">
+
+        <input type="email" placeholder="Email address or username" /><br />
+        <input type="password" placeholder="Password" />
+        <div class="row my-3">
+          <div class="col-6">
             <span class="text-success fs-4 me-2"
               ><i class="bi bi-check-square-fill"></i
             ></span>
             <span class="fs-5 text-muted">Remember me</span>
           </div>
-          <button class="log-in bg-success">LOG IN</button>
+          <div class="col-6">
+            <button class="log-in bg-success">LOG IN</button>
+          </div>
         </div>
+        <a class="text-success fs-5 me-2 text-decoration-none" href="#"
+          >Forget your password?</a
+        >
+        <section>
+          <p class="mb-3 fw-bold text-center fs-5 mt-5">Don't have account?</p>
+        </section>
+        <button
+          class="sign-up d-flex align-items-center justify-content-center mb-3 bg-transparent text-muted"
+        >
+          <span>SIGN UP FOR SPOTIFY</span>
+        </button>
+        <footer>
+          <p class="text-center border-top pt-3">
+            if you click "Log in with Facebook" and not a Spotify user, you will
+            be registered and <br />
+            you agree to Spotify's
+            <a class="text-success fs-5 me-2 text-decoration-none" href="#"
+              >Terms & Conditions</a
+            >
+            and
+            <a class="text-success fs-5 me-2 text-decoration-none" href="#"
+              >Privacy Policy</a
+            >
+          </p>
+        </footer>
       </div>
       <!-- </div> -->
     </main>

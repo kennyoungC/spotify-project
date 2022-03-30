@@ -15,12 +15,19 @@
   border-radius: 40px;
 }
 input {
-  min-width: 200%;
+  min-width: 31%;
   padding: 12px;
 }
 .log-in {
   color: #fff;
   border: none;
-  padding: 12px 78px;
+  padding: 0 78px;
+  border-radius: 40px;
+}
+.sign-up {
+  border: none;
+  border: 2px solid black;
+  padding: 12px 32px;
+  min-width: 30%;
   border-radius: 40px;
 }
