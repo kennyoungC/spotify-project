@@ -13,6 +13,11 @@
   padding: 12px 32px;
   min-width: 30%;
   border-radius: 40px;
+  transition: transform 0.3s;
+}
+.apple:hover,
+.facebook:hover {
+  transform: scale(1.1);
 }
 input {
   min-width: 31%;
@@ -21,8 +26,12 @@ input {
 .log-in {
   color: #fff;
   border: none;
-  padding: 0 78px;
+  padding: 11px 78px;
   border-radius: 40px;
+  transition: transform 0.3s;
+}
+.log-in:hover {
+  transform: scale(1.1);
 }
 .sign-up {
   border: none;
@@ -30,4 +39,8 @@ input {
   padding: 12px 32px;
   min-width: 30%;
   border-radius: 40px;
+  transition: transform 0.3s;
+}
+.sign-up:hover {
+  transform: scale(1.1);
 }
