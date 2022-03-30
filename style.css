@@ -80,8 +80,6 @@ article.main-container article {
   min-width: 18%;
 }
 .background {
-  /* background: rgb(55, 9, 9); */
-
   background: rgb(55, 9, 9);
   background: linear-gradient(
     180deg,
@@ -206,4 +204,12 @@ aside {
 }
 body {
   overflow: hidden;
+}
+/* all styling on album-page starts here */
+.background-album {
+  background: linear-gradient(
+    180deg,
+    rgb(129, 43, 104) 8%,
+    rgba(10, 9, 9, 1) 40%
+  );
 }
