@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.album-spotify-logo {
+  width: 210px;
+}
+.apple,
+.facebook {
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  min-width: 30%;
+  border-radius: 40px;
+}
+input {
+  min-width: 200%;
+  padding: 12px;
+}
+.log-in {
+  color: #fff;
+  border: none;
+  padding: 12px 78px;
+  border-radius: 40px;
+}
