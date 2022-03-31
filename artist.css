@@ -91,6 +91,14 @@ table tbody tr td:not(table tbody tr td:nth-of-type(1)) {
   text-align: end;
 }
 table {
-  border-collapse: separate;
-  border-spacing: 10px 15px;
+  /* border-collapse: separate;
+  border-spacing: 10px 15px; */
+}
+table tbody tr:hover {
+  cursor: pointer;
+  background-color: #5553535d;
+  /* opacity: 1; */
+}
+table tbody tr {
+  height: 60px;
 }
