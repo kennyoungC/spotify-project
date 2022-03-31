@@ -1,0 +1,33 @@
+.artist-page-background {
+  background: url(./img/queen-live-around-the-world.jpg);
+  height: 30vh;
+  position: relative;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+.image-text span {
+  font-size: 18px;
+  color: rgb(197, 201, 206);
+}
+.image-text p {
+  font-size: 18px;
+  color: rgb(197, 201, 206);
+}
+.image-text h1 {
+  font-size: 56px;
+  color: #fff;
+  font-weight: 600;
+}
+.image-text {
+  position: absolute;
+  bottom: 0;
+  /* transform: translate(3%, 120%); */
+}
+.artist-page-background-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(73, 73, 73) 8%,
+    rgba(10, 9, 9, 1) 40%
+  );
+}

@@ -80,8 +80,6 @@ article.main-container article {
   min-width: 18%;
 }
 .background {
-  /* background: rgb(55, 9, 9); */
-
   background: rgb(55, 9, 9);
   background: linear-gradient(
     180deg,

@@ -17,12 +17,13 @@
     />
     <!-- CSS linked already -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./artist.css" />
     <title>Spotify</title>
   </head>
   <body>
     <div class="container">
       <div class="row g-0 position-relative all-content">
-        <div class="col-sm-3 col-md-2 d-none d-sm-block">
+        <div class="col-2 d-none d-sm-block">
           <nav class="nav__bar d-flex flex-column bg-dark text-muted px-3">
             <img
               class="logo py-2"
@@ -75,6 +76,7 @@
                     >Artist page</a
                   >
                 </li>
+                <li>Your Top Songs 2020</li>
                 <li>In Love With You - Erykah B..</li>
                 <li>This is Rod Stewart</li>
                 <li>FRABCHISE ft Young Thung</li>
@@ -108,30 +110,45 @@
           </nav>
         </div>
         <!-- added the main section inside the col below -->
-        <div
-          class="col-12 col-sm-9 col-md-10 background all-sections px-2 pb-2"
-        >
-          <section class="mb-5 container">
-            <div
-              class="d-flex align-items-center justify-content-between pt-4 pb-5"
-            >
-              <div>
-                <span class="arrow"><i class="bi bi-chevron-left"></i></span>
-                <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-              </div>
-              <figure
-                class="d-flex align-items-center gap-2 text-light user-details"
-              >
-                <img src="./img/artist-img/laura-jones.jpg" alt="" />
-                <figcaption>
-                  laura-jones...
-                  <span><i class="bi bi-caret-down-fill"></i></span>
-                </figcaption>
-              </figure>
+        <div class="col-10 px-2 pb-2">
+          <div class="row">
+            <div class="col-12 artist-page-background">
+              <section class="mb-5">
+                <div
+                  class="d-flex align-items-center justify-content-between pt-4 pb-5"
+                >
+                  <div>
+                    <span class="arrow"
+                      ><i class="bi bi-chevron-left"></i
+                    ></span>
+                    <span class="arrow"
+                      ><i class="bi bi-chevron-right"></i
+                    ></span>
+                  </div>
+                  <figure
+                    class="d-flex align-items-center gap-2 text-light user-details"
+                  >
+                    <img src="./img/artist-img/laura-jones.jpg" alt="" />
+                    <figcaption>
+                      laura-jones...
+                      <span><i class="bi bi-caret-down-fill"></i></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </section>
+              <section class="image-text">
+                <span
+                  ><span class="text-primary"
+                    ><i class="bi bi-patch-check-fill"></i
+                  ></span>
+                  Verified Artist</span
+                >
+                <h1>Queen</h1>
+                <p>37,120,733 monthly listeners</p>
+              </section>
             </div>
-          </section>
-          <!-- * album header below -->
-          <header></header>
+            <div class="col-12 artist-page-background-2"></div>
+          </div>
         </div>
       </div>
     </div>
