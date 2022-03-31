@@ -199,6 +199,9 @@ aside {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.all-content::-webkit-scrollbar {
+  display: none;
+}
 .all-sections::-webkit-scrollbar {
   display: none;
 }
