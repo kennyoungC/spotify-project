@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: #000;
+  /* opacity: 0; */
 }
 .nav__bar {
   background-color: #121212;
