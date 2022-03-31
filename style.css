@@ -251,20 +251,13 @@ section div h2,
   font-weight: thin;
   font-size: 11px;
 }
-div > div li {
+section div > div li {
   font-size: 16px;
   color: #fff;
   font-weight: 600;
 }
 @media (max-width: 1344px) {
   .minutes-end::before {
-    content: " ";
-    height: 5px;
     width: 460px;
-    border-radius: 11px;
-    background-color: #fff;
-    display: block;
-    position: absolute;
-    transform: translate(-101%, 165%);
   }
 }
