@@ -164,7 +164,7 @@ article.music-content figcaption + p {
 .volume-up::after {
   content: " ";
   height: 5px;
-  width: 90px;
+  width: 57px;
   border-radius: 11px;
   background-color: #fff;
   display: block;
@@ -191,11 +191,11 @@ aside {
 }
 .all-content {
   max-height: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
+  position: relative !important;
 }
 .all-sections {
-  max-height: 100vh;
-  /* overflow-y: scroll; */
+  max-height: 97vh;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -204,4 +204,16 @@ aside {
 }
 body {
   overflow: hidden;
+}
+@media (max-width: 1344px) {
+  .minutes-end::before {
+    content: " ";
+    height: 5px;
+    width: 460px;
+    border-radius: 11px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    transform: translate(-101%, 165%);
+  }
 }
