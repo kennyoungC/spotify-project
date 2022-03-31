@@ -1,6 +1,6 @@
 .artist-page-background {
   background: url(./img/queen-live-around-the-world.jpg);
-  height: 30vh;
+  height: 33vh;
   position: relative;
   /* background-size: cover; */
   background-repeat: no-repeat;
@@ -80,4 +80,17 @@
   border-style: double;
   border-width: 0 0 0 18px;
   border-color: #fff;
+}
+.juice-2-img {
+  width: 100px;
+}
+table tbody tr td img {
+  width: 48px;
+}
+table tbody tr td:not(table tbody tr td:nth-of-type(1)) {
+  text-align: end;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 10px 15px;
 }
