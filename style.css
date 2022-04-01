@@ -335,30 +335,46 @@ input {
   transform: scale(1.1);
 }
 .alert.alert-success {
-  position: fixed;
+  position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 70%);
   animation: slide-from-top 4s forwards;
+  z-index: 3333333;
 }
 
 @keyframes slide-from-top {
   0% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
   }
 
   50% {
     transform: translate(-50%, 0%);
   }
   100% {
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -140%);
   }
 }
-.modal.fade .modal-dialog.log-in {
+/* .modal.fade .modal-dialog.log-in {
   max-width: 100vw;
   max-height: 100vh;
+} */
+.main {
+  pointer-events: none;
+  opacity: 0;
 }
-.modal-header.log-in {
+.main.show {
+  animation: fadeIn 5s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.modal-header.log-in-page {
   justify-content: center;
 }
 @media (max-width: 1344px) {
