@@ -81,22 +81,22 @@ lightMode.addEventListener(`click`, function () {
 });
 /////////////////////////////////////////////////////
 window.onload = function (event) {
-  setTimeout(() => {
-    $("#mymodal").modal("show");
-  }, 5000);
+  // $("#mymodal").modal("show");
 };
-
-// if (!Cookies.get("popup")) {
-//   setTimeout(function () {
-//     $("#mymodal")
-//       .modal()
-//       .on("shown.bs.modal", function () {
-//         Cookies.set("popup", "true", { expires: 3, path: "/" });
-//       });
-//   }, 600);
-// }
 //////////////////////////
 // // display username on log in
+let myDate = new Date();
+let hrs = myDate.getHours();
+const checkCurrentTime = function () {
+  let greet;
+
+  if (hrs < 12) greet = "Good Morning";
+  else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+  else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+
+  return greet;
+};
+
 const email = document.querySelector(`.email`);
 // console.log(email);
 const password = document.querySelector(`.password`);
@@ -104,13 +104,20 @@ const logInBtn = document.querySelector(`.log-in`);
 console.log(logInBtn);
 logInBtn.addEventListener(`click`, function (e) {
   if (password.value === `12345`) {
-    logInBtn.href = `index.html`;
+    // logInBtn.href = `index.html`;
     console.log(e.target);
-    document.querySelector(`h1`).textContent = `Good morning ${email.value}`;
     const main = document.querySelector(`.main`);
+    console.log(main);
     main.classList.add(`show`);
-    // $("#modal").modal("toggle");
-    document.querySelector(`.modal`).classList.toggle(`show`);
+    $("#mymodal").modal("hide");
+    document.querySelector(`h1`).innerText = `${checkCurrentTime()} ${
+      email.value
+    }!`;
+    document.querySelector(`.user-log-in`).classList.add(`d-none`);
+    document.querySelector(`.user-details`).classList.remove(`d-none`);
+    document.querySelector(`.user-name`).innerText = `${email.value}`;
+    email.value = ``;
+    password.value = ``;
   } else {
     const alert = document.querySelector(`.alert.alert-success`);
     console.log(alert);

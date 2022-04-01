@@ -19,7 +19,7 @@
     <title>Spotify</title>
   </head>
   <body>
-    <div class="main">
+    <div class="main show">
     <div class="container-fluid ps-0 position-relative">
       <div class="row g-0 all-content">
         <div class="col-sm-3 col-md-2 d-none d-sm-block">
@@ -110,7 +110,7 @@
         </div>
         <!-- added the main section inside the col below -->
         <div class="col-12 col-sm-9 col-md-10 background all-sections text-white">
-          <div class="px-2 pb-2">
+          <div class="px-5 pb-2">
             <section class="mb-5">
               <div
                 class="d-flex align-items-center justify-content-between pt-4 pb-5"
@@ -137,21 +137,21 @@
                   >
                     <img src="./img/artist-img/anonymous avatar.png" alt="" />
                     <figcaption class="laura-jones">
-                      <span >laura-jones...</span>
+                      <span class="user-name">laura-jones...</span>
                       <span><i class="bi bi-caret-down-fill"></i></span>
                     </figcaption>
                     
                   </figure>
                   <figcaption
                     class=" user-log-in"
-                    ><a class="text-decoration-none text-white fw-bold" href="login.html"
+                    ><a class="text-decoration-none text-white fw-bold" data-bs-toggle="modal" data-bs-target="#mymodal" href="#"
                     >LOG IN</a
                   >
                   </figcaption>
                 </div>
               </div>
               <h1 class="mb-4">Good morning</h1>
-              <article class="main-container px-2 mb-3 text-white">
+              <article class="main-container mb-3 text-white">
                 <div class="row">
                   <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
                     <article class="d-flex gap-2 align-items-center pe-xl-2">
@@ -312,8 +312,9 @@
               </article>
             </section>
           </div>
+          <audio src="./Superstar Album/Wizkid-Don-t-Dull-(JustNaija.com).mp3" id="audio"></audio>
 
-          <section class="px-3 mb-5">
+          <section class="px-5 mb-5">
             <div class="d-flex justify-content-between text-white mb-3">
               <h2>Recently played</h2>
               <h4>See all</h4>
@@ -321,13 +322,17 @@
             <article class="middle-container text-white">
               <div class="row">
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
-                  <article class="music-content">
-                    <figure>
+                  <article class="music-content ">
+                    <figure class="position-relative" >
                       <img
                         src="./img/artist-img/the5.jpg"
                         alt="album picture"
                         class="img-fluid"
-                      />
+                        />
+                        <div class="play-box">
+                          <p class="play-btn"></p>
+  
+                        </div>
                     </figure>
 
                     <figcaption>Burning Jazz-rock...</figcaption>
@@ -336,12 +341,16 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/janis7.jpg "
                         alt="album picture"
                         class="img-fluid round-image"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Metal Ballads</figcaption>
                     <p class="text-muted">A collection of the best metal ballads</p>
@@ -349,12 +358,16 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/queen-live-around-the-world.jpg"
                         alt="album picture"
                         class="img-fluid"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Midian</figcaption>
                     <p class="text-muted">Cradle of Fifth</p>
@@ -362,12 +375,16 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/like songs.png"
                         alt="album picture"
                         class="img-fluid"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Liked Songs</figcaption>
                   </article>
@@ -375,12 +392,16 @@
 
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/abba2.jpg"
                         alt="album picture"
                         class="img-fluid"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>POST HUMAN:S...</figcaption>
                     <p class="text-muted">Bring Me The Horizon</p>
@@ -388,12 +409,16 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/queen-live-around-the-world.jpg"
                         alt="album picture"
                         class="img-fluid"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Midian</figcaption>
                     <p class="text-muted">Cradle of Fifth</p>
@@ -401,12 +426,16 @@
                 </div>
                 <div class="d-none d-md-block col-md-3 d-xl-none">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/backstreet10.jpg"
                         alt="album picture"
                         class="img-fluid"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>LE BASK</figcaption>
                     <p class="text-muted">Artist</p>
@@ -414,12 +443,16 @@
                 </div>
                 <div class="d-none d-md-block col-md-3 d-xl-none">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/janis7.jpg "
                         alt="album picture"
                         class="img-fluid round-image"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Metal Ballads</figcaption>
                     <p class="text-muted">A collection of the best metal ballads</p>
@@ -428,7 +461,7 @@
               </div>
             </article>
           </section>
-          <section class="px-3 mb-5">
+          <section class="px-5 mb-5">
             <div
               class="d-flex justify-content-between align-items-center text-white mb-4"
             >
@@ -442,11 +475,15 @@
               <div class="row">
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/curtis6.jpg"
                         alt="album picture"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
 
                     <figcaption>Il podcast di Aless...</figcaption>
@@ -455,11 +492,15 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/the4.jpg"
                         alt="album picture"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Demoni Urbani</figcaption>
                     <p class="text-muted">A collection of the best metal ballads</p>
@@ -467,11 +508,15 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/ice1.jpg"
                         alt="album picture"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Daily Cogito</figcaption>
                     <p class="text-muted">Cradle of Fifth</p>
@@ -479,11 +524,15 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/new9.jpg"
                         alt="album picture"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Locanda del Drag...</figcaption>
                     <p class="text-muted">here comes the Horizon</p>
@@ -492,11 +541,15 @@
 
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/george3.jpg"
                         alt="album picture"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Quei Due Sul Serv...</figcaption>
                     <p class="text-muted">spanish specials</p>
@@ -504,11 +557,15 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/backstreet10.jpg"
                         alt="album picture"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Power Pizza...</figcaption>
                     <p class="text-muted">Cradle of Fifth</p>
@@ -516,12 +573,16 @@
                 </div>
                 <div class="d-none d-md-block col-md-3 d-xl-none">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                        class="text-muted"  src="./img/artist-img/backstreet10.jpg"
                         alt="album picture"
                         class="img-fluid"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>LE BASK</figcaption>
                     <p class="text-muted">Artist</p>
@@ -529,12 +590,16 @@
                 </div>
                 <div class="d-none d-md-block col-md-3 d-xl-none">
                   <article class="music-content">
-                    <figure>
+                    <figure class="position-relative">
                       <img
                         src="./img/artist-img/janis7.jpg "
                         alt="album picture"
                         class="img-fluid round-image"
                       />
+                      <div class="play-box">
+                        <p class="play-btn"></p>
+
+                      </div>
                     </figure>
                     <figcaption>Metal Ballads</figcaption>
                     <p class="text-muted">A collection of the best metal ballads</p>
@@ -543,7 +608,7 @@
               </div>
             </article>
           </section>
-          <section class="px-3 mb-5">
+          <section class="px-5 mb-5">
             <div class="d-flex justify-content-between text-white mb-3">
               <h2>Editor's Pick</h2>
               <h4>See all</h4>
@@ -660,7 +725,8 @@
           </section>
         </div>
       </div>
-      <aside class="container-fluid px-0 d-none d-xl-block">
+
+      <aside class="container-fluid px-0 ">
         <div class="bg-dark align-items-center p-3">
           <div class="row align-items-center">
             <div class="col-4 text-white">
@@ -685,12 +751,9 @@
               </div>
             </div>
             <div class="col-6 text-white">
-              <div class="d-flex align-items-center justify-content-between">
-                <div class="align-self-end">
-                  <span class="minutes-start">0:12</span>
-                </div>
+              <div class="d-flex flex-column justify-content-center align-items-center ">
                 <div
-                  class="d-flex gap-3 align-self-start fs-4 align-items-center mb-4 controls"
+                  class="d-flex gap-3  fs-4 align-items-center controls"
                 >
                   <i class="bi bi-shuffle"></i>
                   <i class="bi bi-skip-start-fill"></i>
@@ -700,16 +763,30 @@
                   <i class="bi bi-skip-end-fill"></i>
                   <i class="bi bi-arrow-repeat"></i>
                 </div>
-                <div class="align-self-end">
-                  <span class="minutes-end">3:34</span>
-                </div>
+               <div class="d-flex gap-2 align-items-center w-100">
+                  <div class="">
+                    <span class="minutes-start">0:12</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress">h</div>
+                  </div>
+                  
+                  <div class="">
+                    <span class="minutes-end">3:34</span>
+                  </div>
+               </div>
               </div>
             </div>
             <div class="col-2 text-white">
               <div class="d-flex gap-3 align-items-center fs-4 controls">
                 <i class="bi bi-justify-left"></i>
                 <i class="bi bi-pc-display"></i>
-                <i class="bi bi-volume-up"></i><span class="volume-up"></span>
+                <div class="d-flex align-items-center gap-1 w-100">
+                  <i class="bi bi-volume-up"></i>
+                  <div class="volume-up-container">
+                    <div class="volume-up-progress"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -717,11 +794,6 @@
       </aside>
     </div>
   </div>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">
-  Launch demo modal
-</button>
-
 <!-- Modal -->
 <div class="modal fade text-dark" id="mymodal" tabindex="-1" aria-labelledby="mymodalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -729,7 +801,6 @@
       <div class="modal-header log-in-page text-dark">
         <h5 class="modal-title fs-4" id="mymodalLabel">Welcome To My CLONED-SPOTIFY-PAGE</h5>
       </div>
-      <hr>
       <div class="modal-body">
         <div class="d-flex flex-column align-items-center justify-content-center">
           <span class="fw-bold mb-3 text-center"
@@ -804,8 +875,6 @@
     </div>
   </div>
 </div>
-   <!-- Button trigger modal -->
-
 
 
 <div class="alert alert-success fs-4 d-none" role="alert">
