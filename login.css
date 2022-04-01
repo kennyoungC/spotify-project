@@ -44,3 +44,23 @@ input {
 .sign-up:hover {
   transform: scale(1.1);
 }
+.alert.alert-success {
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  animation: slide-from-top 4s forwards;
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    transform: translate(-50%, -100%);
+  }
+}
