@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #000;
+  /* opacity: 0; */
+}
+.nav__bar {
+  background-color: #121212;
+}
+.nav__bar div:nth-of-type(1) > div {
+  padding: 6px 0;
+}
+
+.nav__bar div:nth-of-type(1) > div:hover,
+.nav__bar div:nth-of-type(2) > div:hover,
+.nav__bar div:nth-of-type(3) > ul li:hover {
+  color: #fff;
+  background: rgb(55, 9, 9);
+  background-color: #5553535d;
+  cursor: pointer;
+}
+.nav__bar div:nth-of-type(3) > ul li {
+  text-overflow: ellipsis;
+
+  /* Needed to make it work */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.logo {
+  width: 140px;
+}
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.liked-img {
+  width: 38px;
+}
+.main-container article .text-content p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #fff;
+}
+article figure img {
+  width: 64px;
+}
+h1 {
+  color: #fff;
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+.show-header {
+  margin-bottom: 0;
+}
+.show-header + span {
+  color: #f0ffffb3;
+}
+.main-container article {
+  background: rgba(200, 154, 154, 0.18);
+  border-radius: 6px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(200, 154, 154, 0.3); */
+  background-color: #5553535d;
+}
+figure {
+  margin-bottom: 0;
+}
+article.main-container article {
+  min-width: 18%;
+}
+.background {
+  background: rgb(55, 9, 9);
+  background: linear-gradient(
+    180deg,
+    rgba(55, 9, 9, 1) 8%,
+    rgba(10, 9, 9, 1) 40%
+  );
+}
+.playing-img {
+  width: 64px;
+}
+.middle-container article {
+  /* line clamp */
+  text-overflow: ellipsis;
+
+  /* Needed to make it work */
+  overflow: hidden;
+  white-space: nowrap;
+  /* width: 190px; */
+}
+.middle-container article figure img {
+  margin-bottom: 8px;
+  border-radius: 11px;
+  height: 185px;
+  width: 135px;
+  object-fit: cover;
+}
+.middle-container article figure img.round-image {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+}
+article.music-content p {
+  margin-bottom: 0;
+}
+article.music-content {
+  padding: 12px;
+  background-color: #5553535d;
+  border-radius: 11px;
+  height: 285px;
+}
+article.music-content figcaption {
+  font-weight: 700;
+}
+article.music-content figcaption + p {
+  font-weight: 400;
+  color: #f0ffffb3;
+}
+.arrow {
+  padding: 12px;
+  background-color: #3534346b;
+  border-radius: 50%;
+  color: #fff;
+}
+.arrow:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.user-details {
+  padding: 4px;
+  border-radius: 40px;
+  background-color: #000;
+}
+.user-details img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.text-content {
+  /* line clamp */
+  text-overflow: ellipsis;
+
+  /* Needed to make it work */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.volume-up {
+  /* height: 50px;
+  width: 50px;
+  background-color: #000; */
+}
+.volume-up::after {
+  content: " ";
+  height: 5px;
+  width: 57px;
+  border-radius: 11px;
+  background-color: #fff;
+  display: block;
+  position: relative;
+  transform: translate(-13%, -30.5%);
+}
+.minutes-end::before {
+  content: " ";
+  height: 5px;
+  width: 547px;
+  border-radius: 11px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  transform: translate(-101%, 165%);
+}
+.controls i:hover {
+  cursor: pointer;
+}
+aside {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.9;
+}
+.all-content {
+  max-height: 100vh;
+  overflow-y: scroll;
+  position: relative !important;
+}
+.all-sections {
+  max-height: 97vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.all-content::-webkit-scrollbar {
+  display: none;
+}
+.all-sections::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow: hidden;
+  color: #fff;
+}
+/* all styling on album-page starts here */
+.background-album {
+  background: linear-gradient(
+    180deg,
+    rgb(129, 43, 104) 8%,
+    rgba(10, 9, 9, 1) 40%
+  );
+}
+header figure {
+  margin-bottom: 1rem;
+}
+header figure img {
+  width: 280px;
+}
+.min-img img {
+  border-radius: 50%;
+  width: 30px;
+}
+.text {
+  margin-top: 6rem;
+}
+.text p {
+  font-size: 12px;
+}
+.text h2 {
+  font-size: 28px;
+}
+.bt-note {
+  font-size: 8px;
+  font-weight: thin;
+}
+.bt-text {
+  font-weight: bold;
+  font-size: 12px;
+}
+section div h2,
+.dur {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.bot-text {
+  font-weight: thin;
+  font-size: 11px;
+}
+section div > div li {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+@media (max-width: 1344px) {
+  .minutes-end::before {
+    width: 460px;
+  }
+}

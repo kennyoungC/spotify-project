@@ -1,0 +1,129 @@
+.artist-page-background {
+  background: url(./img/queen-live-around-the-world.jpg);
+  height: 33vh;
+  position: relative;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+.image-text span {
+  font-size: 18px;
+  color: rgb(197, 201, 206);
+}
+.image-text p {
+  font-size: 18px;
+  color: rgb(197, 201, 206);
+}
+.image-text h1 {
+  font-size: 56px;
+  color: #fff;
+  font-weight: 600;
+}
+.image-text {
+  position: absolute;
+  bottom: 0;
+  /* transform: translate(3%, 120%); */
+}
+.artist-page-background-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(73, 73, 73) 8%,
+    rgba(10, 9, 9, 1) 40%
+  );
+}
+.pause-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1db954;
+  cursor: pointer;
+
+  position: relative;
+}
+.play-btn::before {
+  content: "";
+  width: 18px;
+  height: 17px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  border-style: solid;
+  border-width: 14px 0 14px 18px;
+  border-color: transparent transparent transparent #fff;
+}
+/* .play-btn::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 25px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+} */
+.pause-btn::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-style: double;
+  border-width: 0 0 0 18px;
+  border-color: #fff;
+}
+.juice-2-img {
+  width: 100px;
+}
+table tbody tr td img {
+  width: 48px;
+}
+table tbody tr td:not(table tbody tr td:nth-of-type(1)) {
+  text-align: end;
+}
+table {
+  /* border-collapse: separate;
+  border-spacing: 10px 15px; */
+}
+table tbody tr:hover {
+  cursor: pointer;
+  background-color: #5553535d;
+  /* opacity: 1; */
+}
+table tbody tr {
+  height: 60px;
+}
+aside {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.9;
+}
+.all-content-2 {
+  max-height: 100vh;
+  overflow-y: scroll;
+  position: relative !important;
+}
+.all-sections-2 {
+  max-height: 97vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.all-content-2::-webkit-scrollbar {
+  display: none;
+}
+
+.all-sections-2::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow: hidden;
+}

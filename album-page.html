@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- bootstrap icon linked -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- CSS linked already -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="container position-relative">
+      <div class="row g-0  all-content">
+        <div class="col-sm-3 col-md-2 d-none d-sm-block">
+          <nav class="nav__bar d-flex flex-column bg-dark text-muted px-3">
+            <img
+              class="logo py-2"
+              src="./img/Spotify_Logo_RGB_White.png"
+              alt="spotify-logo"
+            />
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex gap-2 mt-4">
+                <i class="bi bi-house-door-fill"></i>
+                <p class="mb-0">
+                  <a class="text-decoration-none text-light" href="index.html"
+                    >Home</a
+                  >
+                </p>
+              </div>
+              <div class="d-flex gap-2">
+                <i class="bi bi-search"></i>
+                <p class="mb-0">Search</p>
+              </div>
+              <div class="d-flex gap-2">
+                <i class="bi bi-list-nested"></i>
+                <p class="mb-0">Your Library</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column gap-1 my-5">
+              <div class="d-flex gap-2 align-items-center">
+                <i class="bi bi-file-plus-fill fs-1"></i>
+                <p class="mb-0">Create Playlist</p>
+              </div>
+              <div class="d-flex gap-2 align-items-center">
+                <figure>
+                  <img class="liked-img" src="./img/like songs.png" alt="" />
+                </figure>
+                <p class="mb-0">Liked Songs</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li>
+                  <a
+                    class="text-decoration-none text-light"
+                    href="album-page.html"
+                    >Album page</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-decoration-none text-light"
+                    href="artist-page.html"
+                    >Artist page</a
+                  >
+                </li>
+                <li>In Love With You - Erykah B..</li>
+                <li>This is Rod Stewart</li>
+                <li>FRABCHISE ft Young Thung</li>
+                <li>Your Top Songs 2019</li>
+                <li>Palleggio</li>
+                <li>This is Joe Bonamassa</li>
+                <li>Jun19</li>
+                <li>
+                  <span class="d-flex gap-5 align-items-center">
+                    <p class="mb-0">Jack 30th Party 2</p>
+                    <i class="bi bi-people"></i>
+                  </span>
+                </li>
+                <li>
+                  <span class="d-flex gap-5 align-items-center">
+                    <p class="mb-0">Jack 30th Party</p>
+                    <i class="bi bi-people"></i>
+                  </span>
+                </li>
+                <li>This is Opeth</li>
+                <li>Metal Ballads</li>
+                <li>New Playlist</li>
+                <li>Your Top Songs 2018</li>
+                <li>Jazz Classics Blue Note Editi...</li>
+                <li>
+                  <span><i class="bi bi-arrow-down-circle"></i></span>
+                  Install App
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- added the main section inside the col below -->
+        <div
+          class="col-12 col-sm-9 col-md-10 background-album all-sections px-2 pb-2"
+        >
+          <section class="mb-2 container">
+            <div
+              class="d-flex align-items-center justify-content-between pt-4 pb-5"
+            >
+              <div>
+                <span class="arrow"><i class="bi bi-chevron-left"></i></span>
+                <span class="arrow"><i class="bi bi-chevron-right"></i></span>
+              </div>
+              <figure
+                class="d-flex align-items-center gap-2 text-light user-details"
+              >
+                <img src="./img/artist-img/laura-jones.jpg" alt="" />
+                <figcaption>
+                  laura-jones...
+                  <span><i class="bi bi-caret-down-fill"></i></span>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+          <!-- * album header below -->
+          <header class="d-flex mt-1 gap-4 justify-content-center">
+            <figure>
+              <img
+                src="./img/artist-img/george3.jpg"
+                alt="album-image"
+                class=""
+              />
+            </figure>
+            <figcaption class="text">
+              <p>ALBUM</p>
+              <h2 >Bohemian Rhapsody(The Original Soundtrack)</h3>
+              <div class="d-flex gap-0 align-items-center">
+                <figure class="min-img">
+                  <img
+                    src="./img/artist-img/laura-jones.jpg"
+                    class="img-fluid"
+                  />
+                </figure>
+                <p class="bt-text">Queen</p>
+                <p class="bt-note">.2018.22songs,1hr19min</p>
+              </div>
+            </figcaption>
+          </header>
+
+          <section class="py-4">
+            <div class="d-flex gap-4">
+              <i class="bi bi-play-circle-fill" style="color: #157347;"></i>
+              <i class="bi bi-heart" style="color: azure"></i>
+              <i class="bi bi-three-dots" style="color: azure"></i>
+            </div>
+          </section>
+
+          <section>
+            <div class="d-flex justify-content-between">
+              <h2>  # TITLE</h2>
+
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <hr />
+            <ol type="1" class="py-2 gap-2">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>20th century For Fanfare</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">0:25</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Somebody To Love</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">4:55</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Doing All Right = ...Revisited</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">3:16</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Keep Yourself Alive-Live At The Rainbow</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">3:56</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Killer Queen</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">2:59</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Fat Bottomed Girls-Live In Paris</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">4:37</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Bohemian Rhapsody</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">5:54</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Now I'm Here-Live At The Hammersmith Odeon</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">4:25</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Crazy Little Thing Called Love</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">2:43</p>
+              </div>
+            </ol>
+          </section>
+        </div>
+      </div>
+    
+    <!-- * remember to change back to d-xl-block -->
+    <aside class="container-fluid d-none px-0 d-xl-block">
+      <div class="bg-dark align-items-center p-3 ">
+        <div class="row align-items-center">
+          <div class="col-4 text-light">
+            <div class="d-flex gap-3 align-items-center">
+              <figure>
+                <img
+                  class="playing-img"
+                  src="./img/artist-img/curtis6.jpg"
+                  alt=""
+                />
+              </figure>
+              <div class="d-flex flex-column">
+                <p class="mb-0">Another One Bites The Dust - Remastered 2011</p>
+                <p class="mb-0">Queen</p>
+              </div>
+              <div class="d-flex gap-4">
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-pip"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 text-light">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="align-self-end">
+                <span class="minutes-start">0:12</span>
+              </div>
+              <div
+                class="d-flex gap-3 align-self-start fs-4 align-items-center mb-4 controls"
+              >
+                <i class="bi bi-shuffle"></i>
+                <i class="bi bi-skip-start-fill"></i>
+                <span class="fs-3"><i class="bi bi-play-circle-fill"></i></span>
+                <i class="bi bi-skip-end-fill"></i>
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <div class="align-self-end">
+                <span class="minutes-end">3:34</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 text-light">
+            <div class="d-flex gap-3 align-items-center fs-4 controls">
+              <i class="bi bi-justify-left"></i>
+              <i class="bi bi-pc-display"></i>
+              <i class="bi bi-volume-up"></i><span class="volume-up"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
