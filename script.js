@@ -5,6 +5,7 @@ const homePage = document.querySelector(`.home-page`);
 const background = document.querySelector(`.background`);
 const navBar = document.querySelector(`.nav__bar`);
 const logo = document.querySelector(`.nav__bar img`);
+const aside = document.querySelector(`aside`);
 const headerArticles = document.querySelectorAll(
   `article.main-container article`
 );
@@ -194,6 +195,7 @@ const init = function () {
   goToHomePage();
   goToArtistPage2();
   goToAlbumPage();
+  aside.classList.remove(`d-none`);
 };
 logInBtn.addEventListener(`click`, function (e) {
   if (password.value === `12345`) {
