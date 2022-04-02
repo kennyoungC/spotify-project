@@ -2,7 +2,7 @@
   background: url(./img/queen-live-around-the-world.jpg);
   height: 33vh;
   position: relative;
-  /* background-size: cover; */
+  background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center; */
 }
@@ -102,7 +102,7 @@ table tbody tr:hover {
 table tbody tr {
   height: 60px;
 }
-aside {
+/* aside {
   position: absolute;
   bottom: 0;
   opacity: 0.9;
@@ -126,4 +126,4 @@ aside {
 }
 body {
   overflow: hidden;
-}
+} */
