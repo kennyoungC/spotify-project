@@ -331,6 +331,9 @@ input {
   animation: slide-from-top 4s forwards;
   z-index: 3333333;
 }
+td.duration {
+  padding-left: 12px;
+}
 
 @keyframes slide-from-top {
   0% {

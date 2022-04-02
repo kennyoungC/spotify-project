@@ -267,6 +267,7 @@ const progress = document.querySelector(`.progress`);
 const cover = document.querySelector(`.playing-img`);
 const musicContainer = document.querySelector(`.music-container`);
 const bigPlayBtn = document.querySelector(`.artist-page-play`);
+const bigPauseBtn = document.querySelector(`.pause-btn`);
 // Song Titles
 const songs = [
   "Holla At Your Boy",
@@ -338,12 +339,16 @@ const playSong = function () {
   musicContainer.classList.add(`play`);
   play.querySelector(`i.bi`).classList.remove(`bi-play-circle`);
   play.querySelector(`i.bi`).classList.add(`bi-pause-circle`);
+  bigPlayBtn.classList.remove(`play-btn`);
+  bigPlayBtn.classList.add(`pause-btn`);
   audio.play();
 };
 const pauseSong = function () {
   musicContainer.classList.remove(`play`);
   play.querySelector(`i.bi`).classList.add(`bi-play-circle`);
   play.querySelector(`i.bi`).classList.remove(`bi-pause-circle`);
+  bigPlayBtn.classList.add(`play-btn`);
+  bigPlayBtn.classList.remove(`pause-btn`);
   audio.pause();
 };
 const prevSong = function () {
@@ -409,3 +414,4 @@ prev.addEventListener(`click`, prevSong);
 next.addEventListener(`click`, nextSong);
 audio.addEventListener(`ended`, nextSong);
 bigPlayBtn.addEventListener(`click`, playSong);
+bigPauseBtn.addEventListener(`click`, pauseSong);
