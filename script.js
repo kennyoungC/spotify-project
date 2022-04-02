@@ -30,115 +30,146 @@ const randomBackgroundColor = function () {
 const whiteBgColor = function () {
   headerArticles.forEach((eachArticle) => {
     eachArticle.addEventListener(`mouseover`, function () {
-      background.style.background = `linear-gradient(
-        180deg,
-        #fff 8%,
-        #fff 40%
-        )`;
+      background.style.background = `white`;
     });
   });
 };
-randomBackgroundColor();
 //* this is for the dark/light mode
+
 const darkMode = document.querySelector(`.dark-mode`);
 const lightMode = document.querySelector(`.light-mode`);
-console.log(lightMode);
-console.log(darkMode);
-
-darkMode.addEventListener(`click`, function () {
-  lightMode.classList.remove(`d-none`);
-  darkMode.classList.add(`d-none`);
-  background.style.background = `linear-gradient(
+// console.log(lightMode);
+// console.log(darkMode);
+const HometoDarkMode = function () {
+  darkMode.addEventListener(`click`, function () {
+    lightMode.classList.remove(`d-none`);
+    darkMode.classList.add(`d-none`);
+    background.style.background = `linear-gradient(
     180deg,
     rgba(55, 9, 9, 1) 8%,
     rgba(10, 9, 9, 1) 40%
   )`;
-  document.querySelector(`body`).style.backgroundColor = `black`;
-  navBar.style.backgroundColor = `black`;
-  logo.src = `./img/Spotify_Logo_RGB_White.png`;
-  textWhite.forEach((text) => {
-    text.classList.add(`text-white`);
-    text.classList.remove(`text-dark`);
+    document.querySelector(`body`).style.backgroundColor = `black`;
+    navBar.style.backgroundColor = `black`;
+    logo.src = `./img/Spotify_Logo_RGB_White.png`;
+    textWhite.forEach((text) => {
+      text.classList.add(`text-white`);
+      text.classList.remove(`text-dark`);
+      document.querySelector(`.laura-jones`).style.color = `white`;
+    });
+    randomBackgroundColor();
+  });
+};
+const HometoLightMode = function () {
+  lightMode.addEventListener(`click`, function () {
+    lightMode.classList.add(`d-none`);
+    darkMode.classList.remove(`d-none`);
+    document.querySelector(`body`).style.backgroundColor = `white`;
+    document.querySelector(`.nav__bar`).style.backgroundColor = `white`;
+    background.style.background = `white`;
+    navBar.style.backgroundColor = `white`;
+    textWhite.forEach((text) => {
+      text.classList.remove(`text-white`);
+      text.classList.add(`text-dark`);
+    });
+    document.querySelector(`.mode`).style.backgroundColor = `black`;
+    document.querySelector(`.mode`).style.color = `white`;
+
     document.querySelector(`.laura-jones`).style.color = `white`;
+
+    logo.src = `./img/spotify-logo-vector-black-vinnytsia-ukraine-may-flat-style-icon-design-218140539.jpg`;
+
+    whiteBgColor();
   });
-  randomBackgroundColor();
-});
-lightMode.addEventListener(`click`, function () {
-  lightMode.classList.add(`d-none`);
-  darkMode.classList.remove(`d-none`);
-  document.querySelector(`body`).style.backgroundColor = `white`;
-  document.querySelector(`.nav__bar`).style.backgroundColor = `white`;
-  background.style.background = `linear-gradient(
-    180deg,
-    #fff 8%,
-    #fff 40%
-    )`;
-  navBar.style.backgroundColor = `white`;
-  textWhite.forEach((text) => {
-    text.classList.remove(`text-white`);
-    text.classList.add(`text-dark`);
-  });
-  document.querySelector(`.mode`).style.backgroundColor = `black`;
-  document.querySelector(`.mode`).style.color = `white`;
-
-  document.querySelector(`.laura-jones`).style.color = `white`;
-
-  logo.src = `./img/spotify-logo-vector-black-vinnytsia-ukraine-may-flat-style-icon-design-218140539.jpg`;
-
-  whiteBgColor();
-});
+};
 //* this is for the dark/light mode-2
 const darkModeSecond = document.querySelector(`.dark-mode-2`);
 const lightModeSecond = document.querySelector(`.light-mode-2`);
 console.log(lightModeSecond);
 console.log(darkModeSecond);
-
-darkModeSecond.addEventListener(`click`, function () {
-  lightModeSecond.classList.remove(`d-none`);
-  darkModeSecond.classList.add(`d-none`);
-  document.querySelector(
-    `.artist-page-background-2`
-  ).style.background = `linear-gradient(
+const artistPageToDarkMode = function () {
+  darkModeSecond.addEventListener(`click`, function () {
+    lightModeSecond.classList.remove(`d-none`);
+    darkModeSecond.classList.add(`d-none`);
+    document.querySelector(
+      `.artist-page-background-2`
+    ).style.background = `linear-gradient(
     180deg,
     rgb(73, 73, 73) 8%,
     rgba(10, 9, 9, 1) 40%
   )`;
-  document.querySelector(`body`).style.backgroundColor = `black`;
-  navBar.style.backgroundColor = `black`;
-  logo.src = `./img/Spotify_Logo_RGB_White.png`;
-  textWhite.forEach((text) => {
-    text.classList.add(`text-white`);
-    text.classList.remove(`text-dark`);
+    document.querySelector(`body`).style.backgroundColor = `black`;
+    navBar.style.backgroundColor = `black`;
+    logo.src = `./img/Spotify_Logo_RGB_White.png`;
+    document.querySelector(
+      `.sub-artist-header`
+    ).innerHTML = `<div class="d-flex gap-4 align-items-center">
+  <div class="pause-btn"></div>
+  <button
+    class="btn btn-outline-secondary bg-transparent rounded"
+  >
+    <span class="text-light">FOLLOW</span>
+  </button>
+  <p class="text-light fs-4 mb-0">
+    <i class="bi bi-three-dots"></i>
+  </p>
+</div>`;
+    // textWhite.forEach((text) => {
+    //   text.classList.add(`text-white`);
+    //   text.classList.remove(`text-dark`);
+    // });
+    document
+      .querySelector(`.artist-page-music-section`)
+      .classList.add(`text-light`);
+    document
+      .querySelector(`.artist-page-music-section`)
+      .classList.remove(`text-dark`);
   });
-  // randomBackgroundColor();
-  document.querySelector(`.user-log-in-2`).classList.add(`d-none`);
-  document.querySelector(`.user-details-2`).classList.remove(`d-none`);
-});
-lightModeSecond.addEventListener(`click`, function () {
-  lightModeSecond.classList.add(`d-none`);
-  darkModeSecond.classList.remove(`d-none`);
-  document.querySelector(`body`).style.backgroundColor = `white`;
-  document.querySelector(`.nav__bar`).style.backgroundColor = `white`;
-  document.querySelector(
-    `.artist-page-background-2`
-  ).style.background = `linear-gradient(
+};
+const artistPageTolightMode = function () {
+  lightModeSecond.addEventListener(`click`, function () {
+    lightModeSecond.classList.add(`d-none`);
+    darkModeSecond.classList.remove(`d-none`);
+    document.querySelector(`body`).style.backgroundColor = `white`;
+    document.querySelector(`.nav__bar`).style.backgroundColor = `white`;
+    document.querySelector(
+      `.artist-page-background-2`
+    ).style.background = `linear-gradient(
     180deg,
     #fff 8%,
     #fff 40%
     )`;
-  navBar.style.backgroundColor = `white`;
+    navBar.style.backgroundColor = `white`;
 
-  textWhite.forEach((text) => {
-    text.classList.remove(`text-white`);
-    text.classList.add(`text-dark`);
+    // textWhite.forEach((text) => {
+    //   text.classList.remove(`text-white`);
+    //   text.classList.add(`text-dark`);
+    // });
+    document.querySelector(`.mode-2`).style.backgroundColor = `black`;
+    document.querySelector(`.mode-2`).style.color = `white`;
+
+    logo.src = `./img/spotify-logo-vector-black-vinnytsia-ukraine-may-flat-style-icon-design-218140539.jpg`;
+    document.querySelector(
+      `.sub-artist-header`
+    ).innerHTML = `<div class="d-flex gap-4 align-items-center">
+  <div class="pause-btn"></div>
+  <button
+    class="btn btn-outline-dark bg-transparent rounded"
+  >
+    <span class="text-dark">FOLLOW</span>
+  </button>
+  <p class="text-dark fs-4 mb-0">
+    <i class="bi bi-three-dots"></i>
+  </p>
+</div>`;
+    document
+      .querySelector(`.artist-page-music-section`)
+      .classList.remove(`text-light`);
+    document
+      .querySelector(`.artist-page-music-section`)
+      .classList.add(`text-dark`);
   });
-  document.querySelector(`.mode-2`).style.backgroundColor = `black`;
-  document.querySelector(`.mode-2`).style.color = `white`;
-
-  logo.src = `./img/spotify-logo-vector-black-vinnytsia-ukraine-may-flat-style-icon-design-218140539.jpg`;
-
-  // whiteBgColor();
-});
+};
 /////////////////////////////////////////////////////
 window.onload = function (event) {
   // $("#mymodal").modal("show");
@@ -174,6 +205,13 @@ logInBtn.addEventListener(`click`, function (e) {
     document.querySelector(`.user-name`).innerText = `${email.value}`;
     email.value = ``;
     password.value = ``;
+    HometoDarkMode();
+    HometoLightMode();
+    artistPageToDarkMode();
+    artistPageTolightMode();
+    randomBackgroundColor();
+    goToArtistPage();
+    goToHomePage();
   } else {
     const alert = document.querySelector(`.alert.alert-success`);
     console.log(alert);
@@ -190,16 +228,22 @@ logInBtn.addEventListener(`click`, function (e) {
     }, 4500);
   }
 });
-artistPage.addEventListener(`click`, function (e) {
-  e.preventDefault();
-  document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
-  document.querySelector(`.all-sections`).classList.add(`d-none`);
-});
-homePage.addEventListener(`click`, function (e) {
-  e.preventDefault();
-  document.querySelector(`.all-sections-2`).classList.add(`d-none`);
-  document.querySelector(`.all-sections`).classList.remove(`d-none`);
-});
+const goToArtistPage = function () {
+  artistPage.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
+    document.querySelector(`.all-sections`).classList.add(`d-none`);
+    artistPageToDarkMode();
+  });
+};
+const goToHomePage = function () {
+  homePage.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    document.querySelector(`.all-sections-2`).classList.add(`d-none`);
+    document.querySelector(`.all-sections`).classList.remove(`d-none`);
+    HometoDarkMode();
+  });
+};
 //* play section
 const next = document.querySelector(`.next`);
 const play = document.querySelector(`.play`);
