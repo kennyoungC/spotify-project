@@ -12,8 +12,13 @@ body {
 }
 .nav__bar {
   background-color: black;
+  max-height: 97vh;
+  overflow-y: auto;
   /* max-height: 97vh;
   overflow-y: auto; */
+}
+.nav__bar::-webkit-scrollbar {
+  display: none;
 }
 .nav__bar div:nth-of-type(1) > div {
   padding: 6px 0;
@@ -193,7 +198,7 @@ aside {
 }
 .all-content {
   position: relative !important;
-  min-height: 100vh;
+  min-height: 97vh;
 }
 .all-sections {
   max-height: 97vh;
