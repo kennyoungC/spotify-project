@@ -464,8 +464,3 @@ article.middle-container article.music-content:hover > figure .play-box {
     transform: rotate(360deg);
   }
 }
-/* @media (max-width: 1344px) {
-  .minutes-end::before {
-    width: 460px;
-  }
-} */

@@ -246,6 +246,8 @@ const goToHomePage = function () {
 };
 //* play section
 const WizkidMusicTitles = document.querySelectorAll(`tbody tr figure + span`);
+const tbody = document.querySelector(`tbody`);
+console.log(tbody);
 console.log(WizkidMusicTitles);
 const next = document.querySelector(`.next`);
 const play = document.querySelector(`.play`);
@@ -256,22 +258,62 @@ const musicTitle = document.querySelector(`.music-title`);
 const progress = document.querySelector(`.progress`);
 const cover = document.querySelector(`.playing-img`);
 const musicContainer = document.querySelector(`.music-container`);
-
 // Song Titles
 const songs = [
-  "Wizkid-Don-t-Dull-(JustNaija.com)",
-  "Wizkid-Eme-Boyz-ft-Skales-Banky-W-(JustNaija.com)",
-  "Wizkid-For-Me-ft-Wande-Coal-(JustNaija.com)",
+  "Holla At Your Boy",
+  "Don't Dull",
+  "Eme-Boyz-ft-Skales-Banky-W",
+  "For Me ft Wande-Coal",
+  "Gidi Girl",
+  "Love My Baby",
+  "No lele",
+  "Oluwa Lo Ni",
+  "Pakurumo",
+  "Say My Name",
+  "Scatter The Floor",
+  "Shout Out",
+  "Slow Whine",
+  "Tease Me Bad Guys",
+  "Wad-Up ft D-prince",
+  "What you wanna do",
+  "Wiz Party Bonus Freestyle Leak",
 ];
+// creating wizkid's 17 music album
+for (let i = 0; i < 17; i++) {
+  tbody.innerHTML += ` <tr class="song" id="${i}">
+  <th scope="row">${i + 1}</th>
+  <td>
+    <div class="d-flex gap-2 align-items-center">
+      <figure>
+        <img
+          class="img-fluid wiz-img"
+          src="./img/Wizkid images/wizkid ${i + 1}.jpg"
+          alt=""
+        />
+      </figure>
+      <span>${songs[i]}</span>
+    </div>
+  </td>
+  <td>1,407,938,277</td>
+  <td>3:34</td>
+</tr>`;
+}
 
-// keep track of songs
 let songIndex = 2;
-
+document.querySelectorAll(`.song`).forEach((song) =>
+  song.addEventListener(`click`, function (e) {
+    songIndex = parseInt(this.getAttribute(`id`));
+    console.log(songIndex);
+    loadSong(songs[songIndex]);
+    playSong();
+  })
+);
 // Update song details
 const loadSong = function (song) {
   musicTitle.innerText = song;
   audio.src = `./Superstar Album/${song}.mp3`;
-  cover.src = `./img/${song}.jpg`;
+  // for(let i=0; i < songs.length)
+  cover.src = `./img/Wizkid images/wizkid ${songIndex + 1}.jpg`;
 };
 const playSong = function () {
   musicContainer.classList.add(`play`);
@@ -304,8 +346,13 @@ const nextSong = function () {
 const updateProgress = function (e) {
   const movingMinutes = Math.floor(e.srcElement.currentTime);
   const totalMinutes = Math.floor(e.srcElement.duration);
-  // console.log(movingMinutes, totalMinutes);
+  let songDuration = (totalMinutes / 60).toFixed(2);
+  let songDurationMain = String(songDuration).split(`.`).join(`:`);
+  document.querySelector(`.minutes-end`).textContent = `${
+    isNaN(songDuration) ? ` ` : songDurationMain
+  }`;
   const progressPercent = (movingMinutes / totalMinutes) * 100;
+  // console.log(songDurationMain);
   progress.style.width = `${progressPercent}%`;
 };
 const setProgress = function (e) {
