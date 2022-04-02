@@ -1,10 +1,11 @@
 .artist-page-background {
-  background: url(./img/queen-live-around-the-world.jpg);
+  background: url(./img/artist-img/gettyimages-1236949384-612x612.jpg);
   height: 33vh;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
+  filter: grayscale(0);
 }
 .image-text span {
   font-size: 18px;
@@ -55,18 +56,7 @@
   border-width: 14px 0 14px 18px;
   border-color: transparent transparent transparent #fff;
 }
-/* .play-btn::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 25px;
-  background-color: #fff;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-} */
+
 .pause-btn::after {
   content: "";
   position: absolute;
@@ -90,10 +80,7 @@ table tbody tr td img {
 table tbody tr td:not(table tbody tr td:nth-of-type(1)) {
   text-align: end;
 }
-table {
-  /* border-collapse: separate;
-  border-spacing: 10px 15px; */
-}
+
 table tbody tr:hover {
   cursor: pointer;
   background-color: #5553535d;
@@ -102,28 +89,3 @@ table tbody tr:hover {
 table tbody tr {
   height: 60px;
 }
-/* aside {
-  position: absolute;
-  bottom: 0;
-  opacity: 0.9;
-}
-.all-content-2 {
-  max-height: 100vh;
-  overflow-y: scroll;
-  position: relative !important;
-}
-.all-sections-2 {
-  max-height: 97vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.all-content-2::-webkit-scrollbar {
-  display: none;
-}
-
-.all-sections-2::-webkit-scrollbar {
-  display: none;
-}
-body {
-  overflow: hidden;
-} */

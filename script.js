@@ -1,5 +1,6 @@
 `use strict`;
 const artistPage = document.querySelector(`.artist-page`);
+const albumPage = document.querySelector(`.album-page`);
 const homePage = document.querySelector(`.home-page`);
 const background = document.querySelector(`.background`);
 const navBar = document.querySelector(`.nav__bar`);
@@ -7,8 +8,8 @@ const logo = document.querySelector(`.nav__bar img`);
 const headerArticles = document.querySelectorAll(
   `article.main-container article`
 );
+const wizkidPage = document.querySelector(`.wizkid-page`);
 const textWhite = document.querySelectorAll(`.text-white`);
-console.log(textWhite);
 const email = document.querySelector(`.email`);
 // console.log(email);
 const password = document.querySelector(`.password`);
@@ -85,8 +86,7 @@ const HometoLightMode = function () {
 //* this is for the dark/light mode-2
 const darkModeSecond = document.querySelector(`.dark-mode-2`);
 const lightModeSecond = document.querySelector(`.light-mode-2`);
-console.log(lightModeSecond);
-console.log(darkModeSecond);
+
 const artistPageToDarkMode = function () {
   darkModeSecond.addEventListener(`click`, function () {
     lightModeSecond.classList.remove(`d-none`);
@@ -170,12 +170,9 @@ const artistPageTolightMode = function () {
       .classList.add(`text-dark`);
   });
 };
-/////////////////////////////////////////////////////
-window.onload = function (event) {
-  // $("#mymodal").modal("show");
-};
+
 //////////////////////////
-// // display username on log in
+// display username on log in
 let myDate = new Date();
 let hrs = myDate.getHours();
 const checkCurrentTime = function () {
@@ -187,8 +184,17 @@ const checkCurrentTime = function () {
 
   return greet;
 };
-
-console.log(logInBtn);
+const init = function () {
+  HometoDarkMode();
+  HometoLightMode();
+  artistPageToDarkMode();
+  artistPageTolightMode();
+  randomBackgroundColor();
+  goToArtistPage();
+  goToHomePage();
+  goToArtistPage2();
+  goToAlbumPage();
+};
 logInBtn.addEventListener(`click`, function (e) {
   if (password.value === `12345`) {
     // logInBtn.href = `index.html`;
@@ -205,13 +211,7 @@ logInBtn.addEventListener(`click`, function (e) {
     document.querySelector(`.user-name`).innerText = `${email.value}`;
     email.value = ``;
     password.value = ``;
-    HometoDarkMode();
-    HometoLightMode();
-    artistPageToDarkMode();
-    artistPageTolightMode();
-    randomBackgroundColor();
-    goToArtistPage();
-    goToHomePage();
+    init();
   } else {
     const alert = document.querySelector(`.alert.alert-success`);
     console.log(alert);
@@ -233,22 +233,30 @@ const goToArtistPage = function () {
     e.preventDefault();
     document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
     document.querySelector(`.all-sections`).classList.add(`d-none`);
+    document.querySelector(`.all-sections-3`).classList.add(`d-none`);
     artistPageToDarkMode();
+  });
+};
+const goToAlbumPage = function () {
+  albumPage.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    document.querySelector(`.all-sections-2`).classList.add(`d-none`);
+    document.querySelector(`.all-sections`).classList.add(`d-none`);
+    document.querySelector(`.all-sections-3`).classList.remove(`d-none`);
   });
 };
 const goToHomePage = function () {
   homePage.addEventListener(`click`, function (e) {
     e.preventDefault();
     document.querySelector(`.all-sections-2`).classList.add(`d-none`);
+    document.querySelector(`.all-sections-3`).classList.add(`d-none`);
     document.querySelector(`.all-sections`).classList.remove(`d-none`);
-    HometoDarkMode();
+    init();
   });
 };
 //* play section
 const WizkidMusicTitles = document.querySelectorAll(`tbody tr figure + span`);
 const tbody = document.querySelector(`tbody`);
-console.log(tbody);
-console.log(WizkidMusicTitles);
 const next = document.querySelector(`.next`);
 const play = document.querySelector(`.play`);
 const prev = document.querySelector(`.prev`);
@@ -258,6 +266,7 @@ const musicTitle = document.querySelector(`.music-title`);
 const progress = document.querySelector(`.progress`);
 const cover = document.querySelector(`.playing-img`);
 const musicContainer = document.querySelector(`.music-container`);
+const bigPlayBtn = document.querySelector(`.artist-page-play`);
 // Song Titles
 const songs = [
   "Holla At Your Boy",
@@ -294,20 +303,30 @@ for (let i = 0; i < 17; i++) {
       <span>${songs[i]}</span>
     </div>
   </td>
-  <td>1,407,938,277</td>
-  <td>3:34</td>
+  <td>${randomIntFromInterval(250000 * i, 900000)}</td>
+  <td class="duration">3:34</td>
 </tr>`;
 }
-
-let songIndex = 2;
-document.querySelectorAll(`.song`).forEach((song) =>
+// generate random number
+function randomIntFromInterval(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+let songIndex = 0;
+document.querySelectorAll(`.song`).forEach((song) => {
   song.addEventListener(`click`, function (e) {
     songIndex = parseInt(this.getAttribute(`id`));
-    console.log(songIndex);
+    // console.log(songIndex);
     loadSong(songs[songIndex]);
+    tbody.querySelectorAll(`tr`).forEach((tr) => {
+      if (tr.classList.contains(`text-success`)) {
+        tr.classList.remove(`text-success`);
+      }
+    });
+    song.classList.add(`text-success`);
     playSong();
-  })
-);
+  });
+});
 // Update song details
 const loadSong = function (song) {
   musicTitle.innerText = song;
@@ -343,6 +362,7 @@ const nextSong = function () {
   loadSong(songs[songIndex]);
   playSong();
 };
+
 const updateProgress = function (e) {
   const movingMinutes = Math.floor(e.srcElement.currentTime);
   const totalMinutes = Math.floor(e.srcElement.duration);
@@ -352,7 +372,6 @@ const updateProgress = function (e) {
     isNaN(songDuration) ? ` ` : songDurationMain
   }`;
   const progressPercent = (movingMinutes / totalMinutes) * 100;
-  // console.log(songDurationMain);
   progress.style.width = `${progressPercent}%`;
 };
 const setProgress = function (e) {
@@ -362,6 +381,7 @@ const setProgress = function (e) {
   const duration = audio.duration;
 
   audio.currentTime = (clickX / width) * duration;
+  console.log(audio.currentTime);
 };
 // Initially load song info DOM
 loadSong(songs[songIndex]);
@@ -375,9 +395,17 @@ play.addEventListener(`click`, function () {
     playSong();
   }
 });
+const goToArtistPage2 = function () {
+  wizkidPage.addEventListener(`click`, function () {
+    document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
+    document.querySelector(`.all-sections`).classList.add(`d-none`);
+    playSong();
+  });
+};
 // change song events
 progressContainer.addEventListener(`click`, setProgress);
 audio.addEventListener(`timeupdate`, updateProgress);
 prev.addEventListener(`click`, prevSong);
 next.addEventListener(`click`, nextSong);
 audio.addEventListener(`ended`, nextSong);
+bigPlayBtn.addEventListener(`click`, playSong);

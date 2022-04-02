@@ -200,6 +200,7 @@ aside {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .all-content::-webkit-scrollbar {
   display: none;
 }
@@ -338,16 +339,7 @@ input {
     transform: translate(-50%, -140%);
   }
 }
-/* .modal.fade .modal-dialog.log-in {
-  max-width: 100vw;
-  max-height: 100vh;
-} */
-.main {
-  /* opacity: 0; */
-}
-.main.show {
-  /* animation: fadeIn 5s forwards; */
-}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

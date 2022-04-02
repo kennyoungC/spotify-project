@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="main show">
-    <div class="container-fluid ps-0 position-relative">
+    <div class="container-fluid px-0 position-relative">
       <div class="row g-0 all-content">
         <div class="col-sm-3 col-md-2 d-none d-sm-block">
           <nav class="nav__bar d-flex flex-column  text-muted px-3">
@@ -33,7 +33,7 @@
             <div class="d-flex flex-column gap-3">
               <div class="d-flex gap-2 mt-4">
                 <i class="bi bi-house-door-fill"></i>
-                <p class="mb-0">
+                <p class="mb-0" >
                   <a class="text-decoration-none text-white home-page" href="#"
                     >Home</a
                   >
@@ -64,8 +64,8 @@
               <ul class="list-unstyled d-flex flex-column gap-2">
                 <li>
                   <a
-                    class="text-decoration-none text-white fw-bold"
-                    href="album-page.html"
+                    class="text-decoration-none text-white fw-bold album-page"
+                    href="#"
                     >Album page</a
                   >
                 </li>
@@ -111,13 +111,13 @@
         </div>
         <!-- added the main section inside the col below -->
         <!-- * main page below -->
-          <div class="col-12 col-sm-9 col-md-10 background all-sections text-white d-none">
+          <div class="col-12 col-sm-9 col-md-10 background all-sections text-white ">
             <div class="px-5 pb-2">
               <section class="mb-5">
                 <div
                   class="d-flex align-items-center justify-content-between pt-4 pb-5"
                 >
-                  <div>
+                  <div class="d-none d-sm-block">
                     <span class="arrow"><i class="bi bi-chevron-left"></i></span>
                     <span class="arrow"><i class="bi bi-chevron-right"></i></span>
                   </div>
@@ -152,7 +152,7 @@
                     </figcaption>
                   </div>
                 </div>
-                <h1 class="mb-4">Good morning</h1>
+                <h1 class="mb-4 text-white ">Welcome to my spotify page, log in to see all features, your email is your name and your password is 12345 😊</h1>
                 <article class="main-container mb-3 text-white">
                   <div class="row">
                     <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-3">
@@ -324,7 +324,7 @@
               <article class="middle-container text-white">
                 <div class="row">
                   <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
-                    <article class="music-content ">
+                    <article class="music-content wizkid-page">
                       <figure class="position-relative" >
                         <img
                           src="./img/Wizkid-Don-t-Dull-(JustNaija.com).jpg"
@@ -759,7 +759,7 @@
             </section>
           </div>
           <!-- * artist page below -->
-          <div class="col-10 px-2 pb-2 all-sections all-sections-2 ">
+          <div class="col-12 col-sm-9 col-md-10 px-2 pb-2 all-sections all-sections-2 d-none">
             <div class="row">
               <div class="col-12 artist-page-background">
                <section>
@@ -816,7 +816,7 @@
               <div class="col-12 artist-page-background-2 ">
                 <section class="p-4  sub-artist-header">
                   <div class="d-flex gap-4 align-items-center">
-                    <div class="pause-btn"></div>
+                    <div class=" play-btn artist-page-play"></div>
                     <button
                       class="btn btn-outline-secondary bg-transparent rounded"
                     >
@@ -833,9 +833,9 @@
                       <h2 class="fw-bold  fs-4">Popular</h2>
                       <table class="table-botherless  w-100">
                         <tbody>
-                          <tr>
+                          <!-- <tr class="text-success">
                             <th scope="row">
-                              <span class="text-success"
+                              <span class=""
                                 ><i class="bi bi-bar-chart-fill"></i
                               ></span>
                             </th>
@@ -848,7 +848,7 @@
                                     alt=""
                                   />
                                 </figure>
-                                <span class="text-success"
+                                <span 
                                   >Another One Bites The Dust - Remastered
                                   2011</span
                                 >
@@ -958,7 +958,7 @@
                             </td>
                             <td>1,407,938,277</td>
                             <td>3:34</td>
-                          </tr>
+                          </tr> -->
                         </tbody>
                       </table>
                       <p class="my-3">
@@ -1096,10 +1096,10 @@
                         <figcaption>
                           <p class="text-muted mb-1">
                             <span><i class="bi bi-music-note-beamed"></i></span>
-                            Posted By Queen
+                            Posted By Big-Wiz
                           </p>
                           <p class="fw-bold  mb-0">
-                            Queen Best Of <br />
+                            Wizkid Best Of <br />
                             <span class="text-muted">Playlist</span>
                           </p>
                         </figcaption>
@@ -1110,12 +1110,147 @@
               </div>
             </div>
           </div>
-       
+          <div class="col-12 col-sm-9 col-md-10 background-album all-sections d-none all-sections-3 px-2 pb-2 "
+        >
+          <section class="mb-2 container">
+            <div
+              class="d-flex align-items-center justify-content-between pt-4 pb-5"
+            >
+              <div>
+                <span class="arrow"><i class="bi bi-chevron-left"></i></span>
+                <span class="arrow"><i class="bi bi-chevron-right"></i></span>
+              </div>
+              <figure
+                class="d-flex align-items-center gap-2 text-light user-details"
+              >
+                <img src="./img/artist-img/laura-jones.jpg" alt="" />
+                <figcaption>
+                  laura-jones...
+                  <span><i class="bi bi-caret-down-fill"></i></span>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+          <!-- * album header below -->
+          <header class="d-flex mt-1 gap-4 justify-content-center">
+            <figure>
+              <img
+                src="./img/artist-img/george3.jpg"
+                alt="album-image"
+                class=""
+              />
+            </figure>
+            <figcaption class="text">
+              <p>ALBUM</p>
+              <h2 >Bohemian Rhapsody(The Original Soundtrack)</h3>
+              <div class="d-flex gap-0 align-items-center">
+                <figure class="min-img">
+                  <img
+                    src="./img/artist-img/laura-jones.jpg"
+                    class="img-fluid"
+                  />
+                </figure>
+                <p class="bt-text">Queen</p>
+                <p class="bt-note">.2018.22songs,1hr19min</p>
+              </div>
+            </figcaption>
+          </header>
+
+          <section class="py-4">
+            <div class="d-flex gap-4">
+              <i class="bi bi-play-circle-fill" style="color: #157347;"></i>
+              <i class="bi bi-heart" style="color: azure"></i>
+              <i class="bi bi-three-dots" style="color: azure"></i>
+            </div>
+          </section>
+
+          <section>
+            <div class="d-flex justify-content-between">
+              <h2>  # TITLE</h2>
+
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <hr />
+            <ol type="1" class="py-2 gap-2">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>20th century For Fanfare</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">0:25</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Somebody To Love</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">4:55</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Doing All Right = ...Revisited</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">3:16</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Keep Yourself Alive-Live At The Rainbow</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">3:56</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Killer Queen</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">2:59</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Fat Bottomed Girls-Live In Paris</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">4:37</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Bohemian Rhapsody</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">5:54</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Now I'm Here-Live At The Hammersmith Odeon</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">4:25</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <li>Crazy Little Thing Called Love</li>
+                  <p class="bot-text">Queen</p>
+                </div>
+                <p class="dur">2:43</p>
+              </div>
+            </ol>
+          </section>
+        </div>
       </div>
       <aside class="container-fluid px-0 music-container text-light">
         <div class="bg-dark align-items-center p-3">
-          <div class="row align-items-center">
-            <div class="col-4 ">
+          <div class="row align-items-center justify-content-center">
+            <div class="d-none d-md-block col-md-4 ">
               <div class="d-flex gap-3 align-items-center">
                 <figure class="text-muted playing-img-container">
                   <img
@@ -1128,7 +1263,7 @@
                   <p class="mb-0 music-title">
                     Another One Bites The Dust - Remastered 2011
                   </p>
-                  <p class="mb-0">Queen</p>
+                  <p class="mb-0"></p>
                 </div>
                 <div class="d-flex gap-4">
                   <i class="bi bi-heart"></i>
@@ -1163,7 +1298,7 @@
                </div>
               </div>
             </div>
-            <div class="col-2 ">
+            <div class="d-none d-md-block col-md-2  ">
               <div class="d-flex gap-3 align-items-center fs-4 controls">
                 <i class="bi bi-justify-left"></i>
                 <i class="bi bi-pc-display"></i>
