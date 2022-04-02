@@ -245,6 +245,8 @@ const goToHomePage = function () {
   });
 };
 //* play section
+const WizkidMusicTitles = document.querySelectorAll(`tbody tr figure + span`);
+console.log(WizkidMusicTitles);
 const next = document.querySelector(`.next`);
 const play = document.querySelector(`.play`);
 const prev = document.querySelector(`.prev`);
