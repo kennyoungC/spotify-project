@@ -83,7 +83,22 @@ const HometoLightMode = function () {
 //* this is for the dark/light mode-2
 const darkModeSecond = document.querySelector(`.dark-mode-2`);
 const lightModeSecond = document.querySelector(`.light-mode-2`);
-
+const changeTextColor = function (color) {
+  const str = `<div class="d-flex gap-4 align-items-center">
+<div class="pause-btn"></div>
+<button
+  class="btn btn-outline-${
+    color === `light` ? `secondary` : `dark`
+  } bg-transparent rounded"
+>
+  <span class="text-${color}">FOLLOW</span>
+</button>
+<p class="text-${color} fs-4 mb-0">
+  <i class="bi bi-three-dots"></i>
+</p>
+</div>`;
+  return str;
+};
 const artistPageToDarkMode = function () {
   darkModeSecond.addEventListener(`click`, function () {
     lightModeSecond.classList.remove(`d-none`);
@@ -98,23 +113,9 @@ const artistPageToDarkMode = function () {
     document.querySelector(`body`).style.backgroundColor = `black`;
     navBar.style.backgroundColor = `black`;
     logo.src = `./img/Spotify_Logo_RGB_White.png`;
-    document.querySelector(
-      `.sub-artist-header`
-    ).innerHTML = `<div class="d-flex gap-4 align-items-center">
-  <div class="pause-btn"></div>
-  <button
-    class="btn btn-outline-secondary bg-transparent rounded"
-  >
-    <span class="text-light">FOLLOW</span>
-  </button>
-  <p class="text-light fs-4 mb-0">
-    <i class="bi bi-three-dots"></i>
-  </p>
-</div>`;
-    // textWhite.forEach((text) => {
-    //   text.classList.add(`text-white`);
-    //   text.classList.remove(`text-dark`);
-    // });
+    document.querySelector(`.sub-artist-header`).innerHTML =
+      changeTextColor(`light`);
+
     document
       .querySelector(`.artist-page-music-section`)
       .classList.add(`text-light`);
@@ -138,27 +139,12 @@ const artistPageTolightMode = function () {
     )`;
     navBar.style.backgroundColor = `white`;
 
-    // textWhite.forEach((text) => {
-    //   text.classList.remove(`text-white`);
-    //   text.classList.add(`text-dark`);
-    // });
     document.querySelector(`.mode-2`).style.backgroundColor = `black`;
     document.querySelector(`.mode-2`).style.color = `white`;
 
     logo.src = `./img/spotify-logo-vector-black-vinnytsia-ukraine-may-flat-style-icon-design-218140539.jpg`;
-    document.querySelector(
-      `.sub-artist-header`
-    ).innerHTML = `<div class="d-flex gap-4 align-items-center">
-  <div class="pause-btn"></div>
-  <button
-    class="btn btn-outline-dark bg-transparent rounded"
-  >
-    <span class="text-dark">FOLLOW</span>
-  </button>
-  <p class="text-dark fs-4 mb-0">
-    <i class="bi bi-three-dots"></i>
-  </p>
-</div>`;
+    document.querySelector(`.sub-artist-header`).innerHTML =
+      changeTextColor(`dark`);
     document
       .querySelector(`.artist-page-music-section`)
       .classList.remove(`text-light`);
