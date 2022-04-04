@@ -12,11 +12,9 @@ const headerArticles = document.querySelectorAll(
 const wizkidPage = document.querySelector(`.wizkid-page`);
 const textWhite = document.querySelectorAll(`.text-white`);
 const email = document.querySelector(`.email`);
-// console.log(email);
 const password = document.querySelector(`.password`);
 const logInBtn = document.querySelector(`.log-in`);
 //* this is for the random background color
-// console.log(random);
 const randomBackgroundColor = function () {
   headerArticles.forEach((eachArticle) => {
     eachArticle.addEventListener(`mouseover`, function () {
@@ -40,8 +38,6 @@ const whiteBgColor = function () {
 
 const darkMode = document.querySelector(`.dark-mode`);
 const lightMode = document.querySelector(`.light-mode`);
-// console.log(lightMode);
-// console.log(darkMode);
 const HometoDarkMode = function () {
   darkMode.addEventListener(`click`, function () {
     lightMode.classList.remove(`d-none`);
@@ -199,7 +195,6 @@ const init = function () {
 };
 logInBtn.addEventListener(`click`, function (e) {
   if (password.value === `12345`) {
-    // logInBtn.href = `index.html`;
     console.log(e.target);
     const main = document.querySelector(`.main`);
     console.log(main);
@@ -230,6 +225,7 @@ logInBtn.addEventListener(`click`, function (e) {
     }, 4500);
   }
 });
+// * goto section
 const goToArtistPage = function () {
   artistPage.addEventListener(`click`, function (e) {
     e.preventDefault();
@@ -254,6 +250,13 @@ const goToHomePage = function () {
     document.querySelector(`.all-sections-3`).classList.add(`d-none`);
     document.querySelector(`.all-sections`).classList.remove(`d-none`);
     init();
+  });
+};
+const goToArtistPage2 = function () {
+  wizkidPage.addEventListener(`click`, function () {
+    document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
+    document.querySelector(`.all-sections`).classList.add(`d-none`);
+    playSong();
   });
 };
 //* play section
@@ -402,13 +405,7 @@ play.addEventListener(`click`, function () {
     playSong();
   }
 });
-const goToArtistPage2 = function () {
-  wizkidPage.addEventListener(`click`, function () {
-    document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
-    document.querySelector(`.all-sections`).classList.add(`d-none`);
-    playSong();
-  });
-};
+
 // change song events
 progressContainer.addEventListener(`click`, setProgress);
 audio.addEventListener(`timeupdate`, updateProgress);
