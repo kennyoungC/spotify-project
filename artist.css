@@ -95,3 +95,6 @@ table tbody tr th {
 table tbody tr {
   height: 60px;
 }
+td.duration {
+  padding-left: 12px;
+}

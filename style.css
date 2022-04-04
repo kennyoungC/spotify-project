@@ -10,6 +10,10 @@ body {
   font-weight: 400;
   background-color: #121212;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+/** nav-bar section */
 .nav__bar {
   background-color: black;
   max-height: 97vh;
@@ -49,13 +53,7 @@ body {
 .liked-img {
   width: 38px;
 }
-.main-container article .text-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-}
-article figure img {
-  width: 64px;
-}
+/** home-page  */
 h1 {
   color: #fff;
   font-size: 32px;
@@ -63,9 +61,7 @@ h1 {
 h2 {
   font-size: 24px;
 }
-.show-header {
-  margin-bottom: 0;
-}
+
 .show-header + span {
   color: #f0ffffb3;
 }
@@ -85,6 +81,13 @@ article.main-container article {
 article.main-container article:hover {
   transform: scale(1.15);
 }
+.main-container article .text-content p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+article figure img {
+  width: 64px;
+}
 .background {
   background: linear-gradient(
     180deg,
@@ -92,9 +95,7 @@ article.main-container article:hover {
     rgba(10, 9, 9, 1) 40%
   );
 }
-/* .playing-img {
-  width: 64px;
-} */
+
 .middle-container article {
   /* line clamp */
   text-overflow: ellipsis;
@@ -134,6 +135,17 @@ article.music-content figcaption {
 article.music-content figcaption + p {
   font-weight: 400;
 }
+article.music-content:hover {
+  cursor: pointer;
+}
+article.middle-container article.music-content > figure .play-box {
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
+}
+article.middle-container article.music-content:hover > figure .play-box {
+  cursor: pointer;
+  opacity: 1;
+}
 .dark-mode,
 .light-mode,
 .arrow {
@@ -149,10 +161,7 @@ article.music-content figcaption + p {
   color: #fff;
   cursor: pointer;
 }
-.dark-mode:hover .mode,
-.light-mode:hover .mode {
-  display: block;
-}
+
 .mode {
   font-weight: 600;
   font-style: italic;
@@ -164,7 +173,25 @@ article.music-content figcaption + p {
   position: absolute;
   top: 100%;
   right: 100%;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.dark-mode:hover .mode,
+.light-mode:hover .mode {
+  opacity: 1;
+}
+.user-log-in {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 6px;
+  border: 1px solid black;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease-in;
+}
+.user-log-in:hover {
+  transform: scale(1.1);
 }
 .user-details {
   padding: 4px;
@@ -190,12 +217,6 @@ article.music-content figcaption + p {
   cursor: pointer;
   transform: scale(1.2);
 }
-aside {
-  position: absolute;
-  bottom: 0;
-  opacity: 0.9;
-  min-height: 3vh;
-}
 .all-content {
   position: relative !important;
   min-height: 97vh;
@@ -212,22 +233,14 @@ aside {
 .all-sections::-webkit-scrollbar {
   display: none;
 }
-body::-webkit-scrollbar {
-  display: none;
+/** music-nav section */
+aside {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.9;
+  min-height: 3vh;
 }
 
-.user-log-in {
-  font-size: 28px;
-  font-weight: 700;
-  padding: 6px;
-  border: 1px solid black;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  transition: all 0.3s ease-in;
-}
-.user-log-in:hover {
-  transform: scale(1.1);
-}
 /* all styling on album-page starts here */
 .background-album {
   background: linear-gradient(
@@ -282,11 +295,9 @@ section div > div li {
   width: 100vw !important;
   height: 100vh !important;
 }
-/* modal css */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* modal- sign-in section */
+.modal-header.log-in-page {
+  justify-content: center;
 }
 .album-spotify-logo {
   width: 210px;
@@ -337,9 +348,6 @@ input {
   animation: slide-from-top 4s forwards;
   z-index: 3333333;
 }
-td.duration {
-  padding-left: 12px;
-}
 
 @keyframes slide-from-top {
   0% {
@@ -362,9 +370,7 @@ td.duration {
     opacity: 1;
   }
 }
-.modal-header.log-in-page {
-  justify-content: center;
-}
+/* music player section */
 .progress-container {
   background-color: #fff;
   border-radius: 5px;
@@ -426,17 +432,7 @@ td.duration {
   border-width: 12px 0 12px 15px;
   border-color: transparent transparent transparent #fff;
 }
-article.music-content:hover {
-  cursor: pointer;
-}
-article.middle-container article.music-content > figure .play-box {
-  transition: opacity 0.3s ease-in;
-  opacity: 0;
-}
-article.middle-container article.music-content:hover > figure .play-box {
-  cursor: pointer;
-  opacity: 1;
-}
+
 .playing-img-container::after {
   content: "";
   background-color: #fff;
