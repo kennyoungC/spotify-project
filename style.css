@@ -241,7 +241,7 @@ aside {
   min-height: 3vh;
 }
 
-/* all styling on album-page starts here */
+/* * all styling on album-page starts here */
 .background-album {
   background: linear-gradient(
     180deg,
@@ -290,6 +290,9 @@ section div > div li {
   font-size: 16px;
   color: #fff;
   font-weight: 600;
+}
+.album-thead {
+  color: rgb(70, 70, 70);
 }
 .modal {
   width: 100vw !important;

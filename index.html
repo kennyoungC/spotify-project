@@ -111,7 +111,7 @@
         </div>
         <!-- added the main section inside the col below -->
         <!-- * main page below -->
-          <div class="col-12 col-sm-9 col-md-10 background all-sections text-white ">
+          <div class="col-12 col-sm-9 col-md-10 background all-sections text-white d-none">
             <div class="px-5 pb-2">
               <section class="mb-5">
                 <div
@@ -1111,7 +1111,7 @@
             </div>
           </div>
           <!-- * album page below -->
-          <div class="col-12 col-sm-9 col-md-10 background-album all-sections d-none all-sections-3 px-2 pb-2 "
+          <div class="col-12 col-sm-9 col-md-10 background-album all-sections  all-sections-3 px-2 pb-2 "
         >
           <section class="mb-2 container">
             <div
@@ -1141,7 +1141,7 @@
                 class=""
               />
             </figure>
-            <figcaption class="text">
+            <figcaption class="text text-light">
               <p>ALBUM</p>
               <h2 >Bohemian Rhapsody(The Original Soundtrack)</h3>
               <div class="d-flex gap-0 align-items-center">
@@ -1157,97 +1157,93 @@
             </figcaption>
           </header>
 
-          <section class="py-4">
+          <!-- <section class="py-4">
             <div class="d-flex gap-4">
               <i class="bi bi-play-circle-fill" style="color: #157347;"></i>
               <i class="bi bi-heart" style="color: azure"></i>
               <i class="bi bi-three-dots" style="color: azure"></i>
             </div>
-          </section>
-
-          <section>
-            <div class="d-flex justify-content-between">
-              <h2>  # TITLE</h2>
-
-              <i class="bi bi-clock-history"></i>
+          </section> -->
+          <section class="p-4  sub-artist-header">
+            <input type="search" placeholder="search artist albums">
+            <button onclick="doSearch()">search</button>
+            <div class="d-flex gap-4 align-items-center">
+              <div class="play-btn artist-page-play"></div>
+              <div
+                class="fs-4"
+              >
+                <span class="text-light"><i class="bi bi-heart"></i></span>
+              </div>
+              <p class="text-light fs-4 mb-0">
+                <i class="bi bi-three-dots"></i>
+              </p>
             </div>
-            <hr />
-            <ol type="1" class="py-2 gap-2">
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>20th century For Fanfare</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">0:25</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Somebody To Love</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">4:55</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Doing All Right = ...Revisited</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">3:16</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Keep Yourself Alive-Live At The Rainbow</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">3:56</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Killer Queen</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">2:59</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Fat Bottomed Girls-Live In Paris</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">4:37</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Bohemian Rhapsody</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">5:54</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Now I'm Here-Live At The Hammersmith Odeon</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">4:25</p>
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <div>
-                  <li>Crazy Little Thing Called Love</li>
-                  <p class="bot-text">Queen</p>
-                </div>
-                <p class="dur">2:43</p>
-              </div>
-            </ol>
+          </section>
+          <section>
+            <table class="table-botherless  w-100">
+              <thead>
+                <tr class="album-thead">
+                  <th scope="col">#</th>
+                  <th scope="col">TITLE</th>
+                  <th scope="col">PLAYS</th>
+                  <th class="text-end px-3" scope="col"><i class="bi bi-clock"></i></th>
+                </tr>
+              </thead>
+              <tbody class="album-tbody text-light ">
+                <!-- <tr class="">
+                  <th scope="row">
+                    <span class="">
+                    <i class="bi bi-bar-chart-fill"></i> 
+                    1
+                  </span>
+                  </th>
+                  <td>
+                    <div class="d-flex gap-2 align-items-center">
+                      <figure>
+                        <img
+                          class="img-fluid"
+                          src="./img/artist-img/the5.jpg"
+                          alt=""
+                        />
+                      </figure>
+                      <span 
+                        >Another One Bites The Dust - Remastered
+                        2011</span
+                      >
+                    </div>
+                  </td>
+                  <td class="text-start">1,013,238,772</td>
+                  <td class="px-3">5:54</td>
+                </tr> -->
+              </tbody>
+            </table>
+            <button class="btn btn-outline-secondary text-light"data-bs-toggle="modal" data-bs-target="#exampleModal">List Albums</button>
           </section>
         </div>
       </div>
+      <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Album List</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group album-title-list">
+          
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
       <aside class="container-fluid px-0 music-container text-light d-none">
         <div class="bg-dark align-items-center p-3">
           <div class="row align-items-center justify-content-center">

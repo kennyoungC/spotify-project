@@ -1,4 +1,81 @@
 `use strict`;
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    "X-RapidAPI-Key": "09594720b0msh0821b12dc3ce55fp1d1736jsn8d3f8585dcf6",
+  },
+};
+const albumTbody = document.querySelector(`.album-tbody`);
+const albumTitleList = document.querySelector(`.album-title-list`);
+function doSearch() {
+  albumTitleList.innerHTML = ``;
+  albumTbody.innerHTML = ``;
+  const query = document.querySelector(`input[type=search]`).value;
+  loadArtistAlbum(query)
+    .then((response) => response.json())
+    .then((data) => {
+      const artistData = data.data;
+      console.log(artistData);
+      //* DOM MANIPULATION
+      for (let i = 0; i < artistData.length; i++) {
+        let eachData = artistData[i];
+        let artistName = eachData.artist.name;
+        let artistPics = eachData.album.cover;
+        let musicTitle = eachData.title;
+        let musicPreview = eachData.preview;
+        let musicDuration = (eachData.duration / 60).toFixed(2);
+        let musicDurationInTimeFormat = String(musicDuration)
+          .split(`.`)
+          .join(`:`);
+        console.log(musicPreview);
+        // console.log(eachData);
+        // console.log(musicDurationInTimeFormat);
+        // console.log(artistName);
+        // console.log(musicTitle);
+
+        const musicRows = `<tr class="">
+      <th scope="row">
+        <span class="">
+        <!-- <i class="bi bi-bar-chart-fill"></i> -->
+        ${i + 1}
+      </span>
+      </th>
+      <td>
+        <div class="d-flex gap-2 align-items-center">
+          <figure>
+            <img
+              class="img-fluid"
+              src="${artistPics}"
+              alt=""
+            />
+          </figure>
+          <span 
+            >${musicTitle} &mdash; ${artistName}</span
+          >
+        </div>
+      </td>
+      <td class="text-start">1,013,238,772</td>
+      <td class="px-3">${musicDurationInTimeFormat}</td>
+    </tr>`;
+        albumTbody.innerHTML += musicRows;
+
+        albumTitleList.innerHTML += `<li class="list-group-item">${musicTitle}</li>`;
+      }
+      document.querySelector(`audio`).scr = `${musicPreview}`;
+    })
+    .catch((err) => console.error(err));
+}
+const loadArtistAlbum = (artistName) => {
+  return fetch(
+    `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistName}`,
+    options
+  );
+};
+window.onload = () => {
+  loadArtistAlbum(`eminem`);
+};
+
 const artistPage = document.querySelector(`.artist-page`);
 const albumPage = document.querySelector(`.album-page`);
 const homePage = document.querySelector(`.home-page`);
@@ -323,7 +400,6 @@ document.querySelectorAll(`.song`).forEach((song) => {
 const loadSong = function (song) {
   musicTitle.innerText = song;
   audio.src = `./Superstar Album/${song}.mp3`;
-  // for(let i=0; i < songs.length)
   cover.src = `./img/Wizkid images/wizkid ${songIndex + 1}.jpg`;
 };
 const playSong = function () {
@@ -399,4 +475,4 @@ prev.addEventListener(`click`, prevSong);
 next.addEventListener(`click`, nextSong);
 audio.addEventListener(`ended`, nextSong);
 bigPlayBtn.addEventListener(`click`, playSong);
-bigPauseBtn.addEventListener(`click`, pauseSong);
+// bigPauseBtn.addEventListener(`click`, pauseSong);
