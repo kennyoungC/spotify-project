@@ -212,7 +212,10 @@ article.middle-container article.music-content:hover > figure .play-box {
   overflow: hidden;
   white-space: nowrap;
 }
-
+#search-input > input {
+  width: 100%;
+  padding: 6px 0;
+}
 .controls i:hover,
 .controls span > i:hover {
   cursor: pointer;
