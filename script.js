@@ -1,6 +1,6 @@
 `use strict`;
-
-const loadArtistAlbum = (artistName = "wizkid") => {
+let query = "wizkid";
+const search = (artistName = query) => {
   const musicContainer = document.querySelector(`.middle-container > .row`);
   musicContainer.innerHTML = ``;
   fetch(
@@ -11,29 +11,32 @@ const loadArtistAlbum = (artistName = "wizkid") => {
       console.log(data);
       data.data.forEach((data) => {
         document.querySelector(`h2`).innerText = data.artist.name;
-        const musicRow = `<div id="${data.album.id}"class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
-        <article class="music-content wizkid-page">
-        <figure class="position-relative" >
-        <img
-        src="${data.album.cover_medium}"
-        alt="album picture"
-        class="img-fluid"
-        />
-        <div class="play-box">
-        <p class="play-btn"></p>
 
-        </div>
-        </figure>
-        
-        <figcaption>${data.title}</figcaption>
-        <p class="text-muted"><a href="album.html?id=${data.album.id}">Go To Album </a></p>
-        <p class="text-muted"><a href="artist.html?id=${data.artist.id}">${data.artist.name}</a></p>
-        </article>
-        </div>`;
-        musicContainer.innerHTML += musicRow;
+        musicContainer.innerHTML += albumCards(data);
       });
     })
     .catch((err) => console.log(err));
+};
+const albumCards = (data) => {
+  return (musicRow = `<div id="${data.album.id}"class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+  <article class="music-content wizkid-page">
+  <figure class="position-relative" >
+  <img
+  src="${data.album.cover_medium}"
+  alt="album picture"
+  class="img-fluid"
+  />
+  <div class="play-box">
+  <p class="play-btn"></p>
+
+  </div>
+  </figure>
+  
+  <figcaption>${data.title}</figcaption>
+  <p class="text-muted"><a href="album.html?id=${data.album.id}">Go To Album </a></p>
+  <p class="text-muted"><a href="artist.html?id=${data.artist.id}">${data.artist.name}</a></p>
+  </article>
+  </div>`);
 };
 let artistName = [
   "wizkid",
@@ -46,7 +49,22 @@ let artistName = [
   "rihanna",
 ];
 let randArtistName = artistName[Math.floor(Math.random() * artistName.length)];
+const init = function () {
+  HometoDarkMode();
+  HometoLightMode();
 
+  search(`${randArtistName}`);
+
+  randomBackgroundColor();
+  document.getElementById(`search-input`).classList.remove(`d-none`);
+  // aside.classList.remove(`d-none`);
+};
+const handleSearhQuery = (event) => {
+  query = event.target.value;
+  if (query.length > 3 && event.key === "Enter") {
+    search();
+  }
+};
 const artistPage = document.querySelector(`.artist-page`);
 const albumPage = document.querySelector(`.album-page`);
 const homePage = document.querySelector(`.home-page`);
@@ -142,16 +160,7 @@ const checkCurrentTime = function () {
 
   return greet;
 };
-const init = function () {
-  HometoDarkMode();
-  HometoLightMode();
 
-  loadArtistAlbum(`${randArtistName}`);
-
-  randomBackgroundColor();
-
-  // aside.classList.remove(`d-none`);
-};
 logInBtn.addEventListener(`click`, function (e) {
   if (password.value === `12345`) {
     console.log(e.target);

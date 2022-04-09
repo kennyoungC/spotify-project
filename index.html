@@ -45,7 +45,12 @@
                   <p class="mb-0">Search
                </p>
                </div>
-                <div id="search-input"><input onchange="loadArtistAlbum(this.value)" type="search" placeholder="search artist name">
+                <div id="search-input" class="d-none">
+                  <div class="input-group mb-3">
+                    <input type="text" onkeyup="handleSearhQuery(event)" class="form-control" placeholder="search artist name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-secondary" onclick="search()" type="button" id="button-addon2">Go</button>
+                  </div>
+                  <!-- <input onchange="search()" type="search" placeholder=""> -->
               </div>
               </div>
               <div class="d-flex gap-2">
@@ -300,7 +305,7 @@
   
             <section class="px-5 mb-5">
               <div class="d-flex justify-content-between text-white mb-3">
-                <h2 class="fs-1">Recently played</h2>
+                <h2 class="fs-1">Albums</h2>
                 <h4>See all</h4>
               </div>
               <article class="middle-container text-white">
@@ -318,11 +323,115 @@
     
                           </div>
                       </figure>
-  
                       <figcaption>Wizkid Album</figcaption>
                       <p class="text-muted">Superstar</p>
                     </article>
                   </div>
+                  <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                    <article class="music-content">
+                      <figure class="position-relative" >
+                        <img
+                          src="./img/artist-img/gettyimages-1346819392-612x612.jpg"
+                          alt="album picture"
+                          class="img-fluid"
+                          />
+                          <div class="play-box">
+                            <p class="play-btn"></p>
+    
+                          </div>
+                      </figure>
+
+                      <figcaption>Burning Jazz-rock...</figcaption>
+                      <p>You'll find Fiery, modern,groovy,jazz-music</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                    <article class="music-content">
+                      <figure class="position-relative" >
+                        <img
+                          src="./img/artist-img/ice1.jpg"
+                          alt="album picture"
+                          class="img-fluid"
+                          />
+                          <div class="play-box">
+                            <p class="play-btn"></p>
+    
+                          </div>
+                      </figure>
+                      <figcaption>Metal Ballads</figcaption>
+                      <p>A collection of the best metal ballads</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                    <article class="music-content">
+                      <figure class="position-relative" >
+                        <img
+                          src="./img/artist-img/abba2.jpg"
+                          alt="album picture"
+                          class="img-fluid"
+                          />
+                          <div class="play-box">
+                            <p class="play-btn"></p>
+    
+                          </div>
+                      </figure>
+                      <figcaption>Metal Ballads</figcaption>
+                      <p>A collection of the best metal ballads</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                    <article class="music-content">
+                      <figure class="position-relative" >
+                        <img
+                          src="./img/artist-img/the4.jpg"
+                          alt="album picture"
+                          class="img-fluid"
+                          />
+                          <div class="play-box">
+                            <p class="play-btn"></p>
+    
+                          </div>
+                      </figure>
+                      <figcaption>Metal Ballads</figcaption>
+                      <p>A collection of the best metal ballads</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                    <article class="music-content">
+                      <figure class="position-relative" >
+                        <img
+                          src="./img/artist-img/new9.jpg"
+                          alt="album picture"
+                          class="img-fluid"
+                          />
+                          <div class="play-box">
+                            <p class="play-btn"></p>
+    
+                          </div>
+                      </figure>
+                      <figcaption>Midian</figcaption>
+                      <p>Cradle of Fifth</p>
+                    </article>
+                  </div>
+                  <div
+                    class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3"
+                  >
+                    <article class="music-content">
+                      <figure class="position-relative" >
+                        <img
+                          src="./img/like songs.png"
+                          alt="album picture"
+                          class="img-fluid"
+                          />
+                          <div class="play-box">
+                            <p class="play-btn"></p>
+    
+                          </div>
+                      </figure>
+                      <figcaption>Liked Songs</figcaption>
+                    </article>
+                  </div>
+                </div>
                   
                 </div>
               </article>
