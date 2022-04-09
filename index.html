@@ -39,9 +39,14 @@
                   >
                 </p>
               </div>
-              <div class="d-flex gap-2">
-                <i class="bi bi-search"></i>
-                <p class="mb-0">Search</p>
+              <div class="d-flex flex-column gap-2">
+               <div class="d-flex gap-2">
+                  <i class="bi bi-search"></i>
+                  <p class="mb-0">Search
+               </p>
+               </div>
+                <div class="search-input"><input onchange="loadArtistAlbum(this.value)" type="search" placeholder="search artist name">
+              </div>
               </div>
               <div class="d-flex gap-2">
                 <i class="bi bi-list-nested"></i>
@@ -65,42 +70,19 @@
                 <li>
                   <a
                     class="text-decoration-none text-white fw-bold album-page"
-                    href="#"
+                    href="album.html"
                     >Album page</a
                   >
                 </li>
                 <li>
                   <a
                     class="text-decoration-none text-white fw-bold artist-page"
-                    href="#"
+                    href="artist.html"
                     >Artist page</a
                   >
                 </li>
                 
-                <li>In Love With You - Erykah B..</li>
-                <li>This is Rod Stewart</li>
-                <li>FRABCHISE ft Young Thung</li>
-                <li>Your Top Songs 2019</li>
-                <li>Palleggio</li>
-                <li>This is Joe Bonamassa</li>
-                <li>Jun19</li>
-                <li>
-                  <span class="d-flex gap-5 align-items-center">
-                    <p class="mb-0">Jack 30th Party 2</p>
-                    <i class="bi bi-people"></i>
-                  </span>
-                </li>
-                <li>
-                  <span class="d-flex gap-5 align-items-center">
-                    <p class="mb-0">Jack 30th Party</p>
-                    <i class="bi bi-people"></i>
-                  </span>
-                </li>
-                <li>This is Opeth</li>
-                <li>Metal Ballads</li>
-                <li>New Playlist</li>
-                <li>Your Top Songs 2018</li>
-                <li>Jazz Classics Blue Note Editi...</li>
+               
                 <li>
                   <span><i class="bi bi-arrow-down-circle"></i></span>
                   Install App
@@ -111,7 +93,7 @@
         </div>
         <!-- added the main section inside the col below -->
         <!-- * main page below -->
-          <div class="col-12 col-sm-9 col-md-10 background all-sections text-white d-none">
+          <div class="col-12 col-sm-9 col-md-10 background all-sections text-white ">
             <div class="px-5 pb-2">
               <section class="mb-5">
                 <div
@@ -318,7 +300,7 @@
   
             <section class="px-5 mb-5">
               <div class="d-flex justify-content-between text-white mb-3">
-                <h2>Recently played</h2>
+                <h2 class="fs-1">Recently played</h2>
                 <h4>See all</h4>
               </div>
               <article class="middle-container text-white">
@@ -758,470 +740,11 @@
               </article>
             </section>
           </div>
-          <!-- * artist page below -->
-          <div class="col-12 col-sm-9 col-md-10 px-2 pb-2 all-sections all-sections-2 d-none">
-            <div class="row">
-              <div class="col-12 artist-page-background">
-               <section>
-                  <div
-                  class="d-flex align-items-center justify-content-between pt-4 pb-5"
-                >
-                  <div>
-                    <span class="arrow"><i class="bi bi-chevron-left"></i></span>
-                    <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-                  </div>
-                  <div class="d-flex gap-3 align-items-center">
-                    <div class="position-relative" >
-                      <span class="dark-mode dark-mode-2 d-none"
-                      ><i class="bi bi-moon-fill"></i></i
-                      >
-                      <p class="mode mode-2">Dark Mode</p>
-                    </span>
-                    
-                    <span class="light-mode light-mode-2 "
-                    ><i class="bi bi-brightness-high"></i>
-                    <p class="mode mode-2">light Mode</p>
-                  </span>
-                    </div>
-                    <figure
-                      class="d-flex align-items-center gap-2 text-white user-details "
-                    >
-                      <img src="./img/artist-img/anonymous avatar.png" alt="" />
-                      <figcaption class="laura-jones laura-jones-2 text-light">
-                        <span class="user-name user-name-2">Having a great time?</span>
-                        <span><i class="bi bi-caret-down-fill"></i></span>
-                      </figcaption>
-                      
-                    </figure>
-                    <figcaption
-                      class=" user-log-in user-log-in-2 d-none"
-                      ><a class="text-decoration-none text-white fw-bold" data-bs-toggle="modal" data-bs-target="#mymodal" href="#"
-                      >LOG IN</a
-                    >
-                    </figcaption>
-                  </div>
-                </div>
-                </section>
-                <section class="image-text">
-                  <span
-                    ><span class="text-primary"
-                      ><i class="bi bi-patch-check-fill"></i
-                    ></span>
-                    Verified Artist</span
-                  >
-                  <h1>Wizkid</h1>
-                  <p>37,120,733 monthly listeners</p>
-                </section>
-              </div>
-              <div class="col-12 artist-page-background-2 ">
-                <section class="p-4  sub-artist-header">
-                  <div class="d-flex gap-4 align-items-center">
-                    <div class="play-btn artist-page-play"></div>
-                    <button
-                      class="btn btn-outline-secondary bg-transparent rounded"
-                    >
-                      <span class="text-light">FOLLOW</span>
-                    </button>
-                    <p class="text-light fs-4 mb-0">
-                      <i class="bi bi-three-dots"></i>
-                    </p>
-                  </div>
-                </section>
-                <section>
-                  <div class="row mb-5 text-light px-4 artist-page-music-section">
-                    <div class="col-12 col-lg-9">
-                      <h2 class="fw-bold  fs-4">Popular</h2>
-                      <table class="table-botherless  w-100">
-                        <tbody>
-                          <!-- <tr class="text-success">
-                            <th scope="row">
-                              <span class=""
-                                ><i class="bi bi-bar-chart-fill"></i
-                              ></span>
-                            </th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/the5.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span 
-                                  >Another One Bites The Dust - Remastered
-                                  2011</span
-                                >
-                              </div>
-                            </td>
-                            <td>1,013,238,772</td>
-                            <td>5:54</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/the4.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span>Bohememian Rhapsody - Remastered 2011</span>
-                              </div>
-                            </td>
-                            <td>3,497,938,258</td>
-                            <td>4:04</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/backstreet10.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span>Under Pressure - Remastered 2012</span>
-                              </div>
-                            </td>
-                            <td>5,562,745,456</td>
-                            <td>3:34</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/aretha8.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span>Forever Is The Deal - Remastered</span>
-                              </div>
-                            </td>
-                            <td>2,485,464,452</td>
-                            <td>3:34</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/new9.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span>Can't Wait Anymore</span>
-                              </div>
-                            </td>
-                            <td>407,938,277</td>
-                            <td>3:34</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">6</th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/ice1.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span>Memories We Create - Remastered 2019</span>
-                              </div>
-                            </td>
-                            <td>900,938,277</td>
-                            <td>3:34</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">7</th>
-                            <td>
-                              <div class="d-flex gap-2 align-items-center">
-                                <figure>
-                                  <img
-                                    class="img-fluid"
-                                    src="./img/artist-img/janis7.jpg"
-                                    alt=""
-                                  />
-                                </figure>
-                                <span>A Place We Call Home Remastered 2010</span>
-                              </div>
-                            </td>
-                            <td>1,407,938,277</td>
-                            <td>3:34</td>
-                          </tr> -->
-                        </tbody>
-                      </table>
-                      <p class="my-3">
-                        <a class="text-decoration-none  fs-6" href="#"
-                          >SEE MORE</a
-                        >
-                      </p>
-                      <section class=" px-3 my-5">
-                        <div
-                          class="d-flex justify-content-between  mb-3"
-                        >
-                          <h2 class="fw-bold fs-5">Popular Releases</h2>
-                          <h4>See all</h4>
-                        </div>
-                        <article class="middle-container popuplar">
-                          <div class="row">
-                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-                              <article class="music-content">
-                                <figure class="position-relative" >
-                                  <img
-                                    src="./img/artist-img/gettyimages-1346819392-612x612.jpg"
-                                    alt="album picture"
-                                    class="img-fluid"
-                                    />
-                                    <div class="play-box">
-                                      <p class="play-btn"></p>
-              
-                                    </div>
-                                </figure>
-  
-                                <figcaption>Burning Jazz-rock...</figcaption>
-                                <p>You'll find Fiery, modern,groovy,jazz-music</p>
-                              </article>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-                              <article class="music-content">
-                                <figure class="position-relative" >
-                                  <img
-                                    src="./img/Wizkid-For-Me-ft-Wande-Coal-(JustNaija.com).jpg"
-                                    alt="album picture"
-                                    class="img-fluid"
-                                    />
-                                    <div class="play-box">
-                                      <p class="play-btn"></p>
-              
-                                    </div>
-                                </figure>
-                                <figcaption>Metal Ballads</figcaption>
-                                <p>A collection of the best metal ballads</p>
-                              </article>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-                              <article class="music-content">
-                                <figure class="position-relative" >
-                                  <img
-                                    src="./img/Wizkid-Eme-Boyz-ft-Skales-Banky-W-(JustNaija.com).jpg"
-                                    alt="album picture"
-                                    class="img-fluid"
-                                    />
-                                    <div class="play-box">
-                                      <p class="play-btn"></p>
-              
-                                    </div>
-                                </figure>
-                                <figcaption>Metal Ballads</figcaption>
-                                <p>A collection of the best metal ballads</p>
-                              </article>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-                              <article class="music-content">
-                                <figure class="position-relative" >
-                                  <img
-                                    src="./img/artist-img/gettyimages-1342638624-612x612.jpg"
-                                    alt="album picture"
-                                    class="img-fluid"
-                                    />
-                                    <div class="play-box">
-                                      <p class="play-btn"></p>
-              
-                                    </div>
-                                </figure>
-                                <figcaption>Metal Ballads</figcaption>
-                                <p>A collection of the best metal ballads</p>
-                              </article>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-                              <article class="music-content">
-                                <figure class="position-relative" >
-                                  <img
-                                    src="./img/Wizkid-Don-t-Dull-(JustNaija.com).jpg"
-                                    alt="album picture"
-                                    class="img-fluid"
-                                    />
-                                    <div class="play-box">
-                                      <p class="play-btn"></p>
-              
-                                    </div>
-                                </figure>
-                                <figcaption>Midian</figcaption>
-                                <p>Cradle of Fifth</p>
-                              </article>
-                            </div>
-                            <div
-                              class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3"
-                            >
-                              <article class="music-content">
-                                <figure class="position-relative" >
-                                  <img
-                                    src="./img/Wizkid-Don-t-Dull-(JustNaija.com).jpg"
-                                    alt="album picture"
-                                    class="img-fluid"
-                                    />
-                                    <div class="play-box">
-                                      <p class="play-btn"></p>
-              
-                                    </div>
-                                </figure>
-                                <figcaption>Liked Songs</figcaption>
-                              </article>
-                            </div>
-                          </div>
-                        </article>
-                      </section>
-                    </div>
-                    <div class="d-none d-lg-block col-lg-3">
-                      <h2 class="fw-bold ">Artist pick</h2>
-                      <div class="d-flex gap-3 align-items-center">
-                        <figure>
-                          <img
-                            class="juice-2-img img-fluid"
-                            src="./img/juice 2.jpg"
-                            alt=""
-                          />
-                        </figure>
-                        <figcaption>
-                          <p class="text-muted mb-1">
-                            <span><i class="bi bi-music-note-beamed"></i></span>
-                            Posted By Big-Wiz
-                          </p>
-                          <p class="fw-bold  mb-0">
-                            Wizkid Best Of <br />
-                            <span class="text-muted">Playlist</span>
-                          </p>
-                        </figcaption>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-          <!-- * album page below -->
-          <div class="col-12 col-sm-9 col-md-10 background-album all-sections  all-sections-3 px-2 pb-2 "
-        >
-          <section class="mb-2 container">
-            <div
-              class="d-flex align-items-center justify-content-between pt-4 pb-5"
-            >
-              <div>
-                <span class="arrow"><i class="bi bi-chevron-left"></i></span>
-                <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-              </div>
-              <figure
-                class="d-flex align-items-center gap-2 text-light user-details"
-              >
-                <img src="./img/artist-img/anonymous avatar.png" alt="" />
-                <figcaption>
-                  feel free to explore
-                  <span><i class="bi bi-caret-down-fill"></i></span>
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-          <!-- * album header below -->
-          <header class="d-flex mt-1 gap-4 justify-content-center">
-            <figure>
-              <img
-                src="./img/artist-img/george3.jpg"
-                alt="album-image"
-                class=""
-              />
-            </figure>
-            <figcaption class="text text-light">
-              <p>ALBUM</p>
-              <h2 >Bohemian Rhapsody(The Original Soundtrack)</h3>
-              <div class="d-flex gap-0 align-items-center">
-                <figure class="min-img">
-                  <img
-                    src="./img/artist-img/laura-jones.jpg"
-                    class="img-fluid"
-                  />
-                </figure>
-                <p class="bt-text">Queen</p>
-                <p class="bt-note">.2018.22songs,1hr19min</p>
-              </div>
-            </figcaption>
-          </header>
-
-          <!-- <section class="py-4">
-            <div class="d-flex gap-4">
-              <i class="bi bi-play-circle-fill" style="color: #157347;"></i>
-              <i class="bi bi-heart" style="color: azure"></i>
-              <i class="bi bi-three-dots" style="color: azure"></i>
-            </div>
-          </section> -->
-          <section class="p-4  sub-artist-header">
-            <input type="search" placeholder="search artist albums">
-            <button onclick="doSearch()">search</button>
-            <div class="d-flex gap-4 align-items-center">
-              <div class="play-btn artist-page-play"></div>
-              <div
-                class="fs-4"
-              >
-                <span class="text-light"><i class="bi bi-heart"></i></span>
-              </div>
-              <p class="text-light fs-4 mb-0">
-                <i class="bi bi-three-dots"></i>
-              </p>
-            </div>
-          </section>
-          <section>
-            <table class="table-botherless  w-100">
-              <thead>
-                <tr class="album-thead">
-                  <th scope="col">#</th>
-                  <th scope="col">TITLE</th>
-                  <th scope="col">PLAYS</th>
-                  <th class="text-end px-3" scope="col"><i class="bi bi-clock"></i></th>
-                </tr>
-              </thead>
-              <tbody class="album-tbody text-light ">
-                <!-- <tr class="">
-                  <th scope="row">
-                    <span class="">
-                    <i class="bi bi-bar-chart-fill"></i> 
-                    1
-                  </span>
-                  </th>
-                  <td>
-                    <div class="d-flex gap-2 align-items-center">
-                      <figure>
-                        <img
-                          class="img-fluid"
-                          src="./img/artist-img/the5.jpg"
-                          alt=""
-                        />
-                      </figure>
-                      <span 
-                        >Another One Bites The Dust - Remastered
-                        2011</span
-                      >
-                    </div>
-                  </td>
-                  <td class="text-start">1,013,238,772</td>
-                  <td class="px-3">5:54</td>
-                </tr> -->
-              </tbody>
-            </table>
-            <button class="btn btn-outline-secondary text-light"data-bs-toggle="modal" data-bs-target="#exampleModal">List Albums</button>
-          </section>
-        </div>
+    
+         
+        
       </div>
-      <!-- Button trigger modal -->
+    
 
 
 <!-- Modal -->

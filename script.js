@@ -1,79 +1,53 @@
 `use strict`;
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    "X-RapidAPI-Key": "09594720b0msh0821b12dc3ce55fp1d1736jsn8d3f8585dcf6",
-  },
-};
-const albumTbody = document.querySelector(`.album-tbody`);
-const albumTitleList = document.querySelector(`.album-title-list`);
-function doSearch() {
-  albumTitleList.innerHTML = ``;
-  albumTbody.innerHTML = ``;
-  const query = document.querySelector(`input[type=search]`).value;
-  loadArtistAlbum(query)
-    .then((response) => response.json())
+
+const loadArtistAlbum = (artistName = "wizkid") => {
+  const musicContainer = document.querySelector(`.middle-container > .row`);
+  musicContainer.innerHTML = ``;
+  fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artistName}`
+  )
+    .then((resp) => resp.json())
     .then((data) => {
-      const artistData = data.data;
-      console.log(artistData);
-      //* DOM MANIPULATION
-      for (let i = 0; i < artistData.length; i++) {
-        let eachData = artistData[i];
-        let artistName = eachData.artist.name;
-        let artistPics = eachData.album.cover;
-        let musicTitle = eachData.title;
-        let musicPreview = eachData.preview;
-        let musicDuration = (eachData.duration / 60).toFixed(2);
-        let musicDurationInTimeFormat = String(musicDuration)
-          .split(`.`)
-          .join(`:`);
-        console.log(musicPreview);
-        // console.log(eachData);
-        // console.log(musicDurationInTimeFormat);
-        // console.log(artistName);
-        // console.log(musicTitle);
+      console.log(data);
+      data.data.forEach((data) => {
+        document.querySelector(`h2`).innerText = data.artist.name;
+        const musicRow = `<div id="${data.album.id}"class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
+        <article class="music-content wizkid-page">
+        <figure class="position-relative" >
+        <img
+        src="${data.album.cover_medium}"
+        alt="album picture"
+        class="img-fluid"
+        />
+        <div class="play-box">
+        <p class="play-btn"></p>
 
-        const musicRows = `<tr class="">
-      <th scope="row">
-        <span class="">
-        <!-- <i class="bi bi-bar-chart-fill"></i> -->
-        ${i + 1}
-      </span>
-      </th>
-      <td>
-        <div class="d-flex gap-2 align-items-center">
-          <figure>
-            <img
-              class="img-fluid"
-              src="${artistPics}"
-              alt=""
-            />
-          </figure>
-          <span 
-            >${musicTitle} &mdash; ${artistName}</span
-          >
         </div>
-      </td>
-      <td class="text-start">1,013,238,772</td>
-      <td class="px-3">${musicDurationInTimeFormat}</td>
-    </tr>`;
-        albumTbody.innerHTML += musicRows;
-
-        albumTitleList.innerHTML += `<li class="list-group-item">${musicTitle}</li>`;
-      }
-      document.querySelector(`audio`).scr = `${musicPreview}`;
+        </figure>
+        
+        <figcaption>${data.title}</figcaption>
+        <p class="text-muted"><a href="album.html?id=${data.album.id}">Go To Album </a></p>
+        <p class="text-muted"><a href="artist.html?id=${data.artist.id}">${data.artist.name}</a></p>
+        </article>
+        </div>`;
+        musicContainer.innerHTML += musicRow;
+      });
     })
-    .catch((err) => console.error(err));
-}
-const loadArtistAlbum = (artistName) => {
-  return fetch(
-    `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistName}`,
-    options
-  );
+    .catch((err) => console.log(err));
 };
+let artistName = [
+  "wizkid",
+  "davido",
+  "olamide",
+  "tekno",
+  "skales",
+  "patoranking",
+  "eminem",
+  "rihanna",
+];
+let randArtistName = artistName[Math.floor(Math.random() * artistName.length)];
 window.onload = () => {
-  loadArtistAlbum(`eminem`);
+  loadArtistAlbum(`${randArtistName}`);
 };
 
 const artistPage = document.querySelector(`.artist-page`);
@@ -157,79 +131,6 @@ const HometoLightMode = function () {
     whiteBgColor();
   });
 };
-//* this is for the dark/light mode-2
-const darkModeSecond = document.querySelector(`.dark-mode-2`);
-const lightModeSecond = document.querySelector(`.light-mode-2`);
-const changeTextColor = function (color) {
-  const str = `<div class="d-flex gap-4 align-items-center">
-<div class="pause-btn"></div>
-<button
-  class="btn btn-outline-${
-    color === `light` ? `secondary` : `dark`
-  } bg-transparent rounded"
->
-  <span class="text-${color}">FOLLOW</span>
-</button>
-<p class="text-${color} fs-4 mb-0">
-  <i class="bi bi-three-dots"></i>
-</p>
-</div>`;
-  return str;
-};
-const artistPageToDarkMode = function () {
-  darkModeSecond.addEventListener(`click`, function () {
-    lightModeSecond.classList.remove(`d-none`);
-    darkModeSecond.classList.add(`d-none`);
-    document.querySelector(
-      `.artist-page-background-2`
-    ).style.background = `linear-gradient(
-    180deg,
-    rgb(73, 73, 73) 8%,
-    rgba(10, 9, 9, 1) 40%
-  )`;
-    document.querySelector(`body`).style.backgroundColor = `black`;
-    navBar.style.backgroundColor = `black`;
-    logo.src = `./img/Spotify_Logo_RGB_White.png`;
-    document.querySelector(`.sub-artist-header`).innerHTML =
-      changeTextColor(`light`);
-
-    document
-      .querySelector(`.artist-page-music-section`)
-      .classList.add(`text-light`);
-    document
-      .querySelector(`.artist-page-music-section`)
-      .classList.remove(`text-dark`);
-  });
-};
-const artistPageTolightMode = function () {
-  lightModeSecond.addEventListener(`click`, function () {
-    lightModeSecond.classList.add(`d-none`);
-    darkModeSecond.classList.remove(`d-none`);
-    document.querySelector(`body`).style.backgroundColor = `white`;
-    document.querySelector(`.nav__bar`).style.backgroundColor = `white`;
-    document.querySelector(
-      `.artist-page-background-2`
-    ).style.background = `linear-gradient(
-    180deg,
-    #fff 8%,
-    #fff 40%
-    )`;
-    navBar.style.backgroundColor = `white`;
-
-    document.querySelector(`.mode-2`).style.backgroundColor = `black`;
-    document.querySelector(`.mode-2`).style.color = `white`;
-
-    logo.src = `./img/spotify-logo-vector-black-vinnytsia-ukraine-may-flat-style-icon-design-218140539.jpg`;
-    document.querySelector(`.sub-artist-header`).innerHTML =
-      changeTextColor(`dark`);
-    document
-      .querySelector(`.artist-page-music-section`)
-      .classList.remove(`text-light`);
-    document
-      .querySelector(`.artist-page-music-section`)
-      .classList.add(`text-dark`);
-  });
-};
 
 //////////////////////////
 // display username on log in
@@ -288,40 +189,7 @@ logInBtn.addEventListener(`click`, function (e) {
     }, 4500);
   }
 });
-// * goto section
-const goToArtistPage = function () {
-  artistPage.addEventListener(`click`, function (e) {
-    e.preventDefault();
-    document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
-    document.querySelector(`.all-sections`).classList.add(`d-none`);
-    document.querySelector(`.all-sections-3`).classList.add(`d-none`);
-    artistPageToDarkMode();
-  });
-};
-const goToAlbumPage = function () {
-  albumPage.addEventListener(`click`, function (e) {
-    e.preventDefault();
-    document.querySelector(`.all-sections-2`).classList.add(`d-none`);
-    document.querySelector(`.all-sections`).classList.add(`d-none`);
-    document.querySelector(`.all-sections-3`).classList.remove(`d-none`);
-  });
-};
-const goToHomePage = function () {
-  homePage.addEventListener(`click`, function (e) {
-    e.preventDefault();
-    document.querySelector(`.all-sections-2`).classList.add(`d-none`);
-    document.querySelector(`.all-sections-3`).classList.add(`d-none`);
-    document.querySelector(`.all-sections`).classList.remove(`d-none`);
-    init();
-  });
-};
-const goToArtistPage2 = function () {
-  wizkidPage.addEventListener(`click`, function () {
-    document.querySelector(`.all-sections-2`).classList.remove(`d-none`);
-    document.querySelector(`.all-sections`).classList.add(`d-none`);
-    playSong();
-  });
-};
+
 //* play section
 const WizkidMusicTitles = document.querySelectorAll(`tbody tr figure + span`);
 const tbody = document.querySelector(`tbody`);
@@ -357,25 +225,25 @@ const songs = [
   "Wiz Party Bonus Freestyle Leak",
 ];
 // creating wizkid's 17 music album
-for (let i = 0; i < 17; i++) {
-  tbody.innerHTML += ` <tr class="song" id="${i}">
-  <th scope="row">${i + 1}</th>
-  <td>
-    <div class="d-flex gap-2 align-items-center">
-      <figure>
-        <img
-          class="img-fluid wiz-img"
-          src="./img/Wizkid images/wizkid ${i + 1}.jpg"
-          alt=""
-        />
-      </figure>
-      <span>${songs[i]}</span>
-    </div>
-  </td>
-  <td>${randomIntFromInterval(250000 * i, 900000)}</td>
-  <td class="duration">3:34</td>
-</tr>`;
-}
+// for (let i = 0; i < 17; i++) {
+//   tbody.innerHTML += ` <tr class="song" id="${i}">
+//   <th scope="row">${i + 1}</th>
+//   <td>
+//     <div class="d-flex gap-2 align-items-center">
+//       <figure>
+//         <img
+//           class="img-fluid wiz-img"
+//           src="./img/Wizkid images/wizkid ${i + 1}.jpg"
+//           alt=""
+//         />
+//       </figure>
+//       <span>${songs[i]}</span>
+//     </div>
+//   </td>
+//   <td>${randomIntFromInterval(250000 * i, 900000)}</td>
+//   <td class="duration">3:34</td>
+// </tr>`;
+// }
 // generate random number
 function randomIntFromInterval(min, max) {
   // min and max included
@@ -474,5 +342,5 @@ audio.addEventListener(`timeupdate`, updateProgress);
 prev.addEventListener(`click`, prevSong);
 next.addEventListener(`click`, nextSong);
 audio.addEventListener(`ended`, nextSong);
-bigPlayBtn.addEventListener(`click`, playSong);
+// bigPlayBtn.addEventListener(`click`, playSong);
 // bigPauseBtn.addEventListener(`click`, pauseSong);

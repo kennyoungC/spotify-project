@@ -16,10 +16,6 @@ body::-webkit-scrollbar {
 /** nav-bar section */
 .nav__bar {
   background-color: black;
-  max-height: 97vh;
-  overflow-y: auto;
-  /* max-height: 97vh;
-  overflow-y: auto; */
 }
 .nav__bar::-webkit-scrollbar {
   display: none;
@@ -35,15 +31,20 @@ body::-webkit-scrollbar {
   background-color: #5553535d;
   cursor: pointer;
 }
-.nav__bar div:nth-of-type(3) > ul li {
-  text-overflow: ellipsis;
+/* .nav__bar div:nth-of-type(3) > ul li { */
+/*text-overflow: ellipsis;
 
-  /* Needed to make it work */
+   Needed to make it work
   overflow: hidden;
-  white-space: nowrap;
-}
+  white-space: nowrap; */
+/* } */
 .logo {
   width: 140px;
+}
+.search-input {
+  /* opacity: 0; */
+  border: none;
+  max-width: -webkit-fill-available;
 }
 .logo-box {
   display: flex;
@@ -127,7 +128,7 @@ article.music-content {
   padding: 12px;
   background-color: #5553535d;
   border-radius: 11px;
-  height: 260px;
+  height: 280px;
 }
 article.music-content figcaption {
   font-weight: 700;
@@ -257,13 +258,13 @@ header figure img {
 }
 .min-img img {
   border-radius: 50%;
-  width: 30px;
+  width: 40px;
 }
 .text {
   margin-top: 6rem;
 }
 .text p {
-  font-size: 12px;
+  font-size: 16px;
 }
 .text h2 {
   font-size: 28px;

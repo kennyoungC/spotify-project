@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- bootstrap icon linked -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- CSS linked already -->
+    <link rel="stylesheet" href="./artist.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="main show">
+      <div class="container-fluid px-0 position-relative">
+        <div class="row g-0 all-content">
+          <div class="col-sm-3 col-md-2 d-none d-sm-block">
+            <nav class="nav__bar d-flex flex-column text-muted px-3">
+              <img
+                class="logo py-2"
+                src="./img/Spotify_Logo_RGB_White.png"
+                alt="spotify-logo"
+              />
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex gap-2 mt-4">
+                  <i class="bi bi-house-door-fill"></i>
+                  <p class="mb-0">
+                    <a
+                      class="text-decoration-none text-white home-page"
+                      href="index.html"
+                      >Home</a
+                    >
+                  </p>
+                </div>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-search"></i>
+                  <p class="mb-0">Search</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-list-nested"></i>
+                  <p class="mb-0">Your Library</p>
+                </div>
+              </div>
+              <div class="d-flex flex-column gap-1 my-5">
+                <div class="d-flex gap-2 align-items-center">
+                  <i class="bi bi-file-plus-fill fs-1"></i>
+                  <p class="mb-0">Create Playlist</p>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                  <figure>
+                    <img class="liked-img" src="./img/like songs.png" alt="" />
+                  </figure>
+                  <p class="mb-0">Liked Songs</p>
+                </div>
+              </div>
+              <div>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                  <li>
+                    <a
+                      class="text-decoration-none text-white fw-bold album-page"
+                      href="#"
+                      >Album page</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-decoration-none text-white fw-bold artist-page"
+                      href="#"
+                      >Artist page</a
+                    >
+                  </li>
+
+                  <li>Jun19</li>
+                  <li>
+                    <span class="d-flex gap-5 align-items-center">
+                      <p class="mb-0">Jack 30th Party 2</p>
+                      <i class="bi bi-people"></i>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="d-flex gap-5 align-items-center">
+                      <p class="mb-0">Jack 30th Party</p>
+                      <i class="bi bi-people"></i>
+                    </span>
+                  </li>
+
+                  <li>
+                    <span><i class="bi bi-arrow-down-circle"></i></span>
+                    Install App
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- added the main section inside the col below -->
+          <!-- * album page below -->
+          <div
+            class="col-12 col-sm-9 col-md-10 px-2 pb-2 all-sections all-sections-2"
+          >
+            <div class="row">
+              <div class="col-12 artist-page-background">
+                <section>
+                  <div
+                    class="d-flex align-items-center justify-content-between pt-4 pb-5"
+                  >
+                    <div>
+                      <span class="arrow"
+                        ><i class="bi bi-chevron-left"></i
+                      ></span>
+                      <span class="arrow"
+                        ><i class="bi bi-chevron-right"></i
+                      ></span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center">
+                      <div class="position-relative" >
+                      <span class="dark-mode dark-mode-2 d-none"
+                      ><i class="bi bi-moon-fill"></i></i
+                      >
+                      <p class="mode mode-2">Dark Mode</p>
+                    </span>
+                    
+                    <span class="light-mode light-mode-2 "
+                    ><i class="bi bi-brightness-high"></i>
+                    <p class="mode mode-2">light Mode</p>
+                    </span>
+                    </div>
+                      <figure
+                        class="d-flex align-items-center gap-2 text-white user-details"
+                      >
+                        <img
+                          src="./img/artist-img/anonymous avatar.png"
+                          alt=""
+                        />
+                        <figcaption
+                          class="laura-jones laura-jones-2 text-light"
+                        >
+                          <span class="user-name user-name-2"
+                            >Having a great time?</span
+                          >
+                          <span><i class="bi bi-caret-down-fill"></i></span>
+                        </figcaption>
+                      </figure>
+                      <figcaption class="user-log-in user-log-in-2 d-none">
+                        <a
+                          class="text-decoration-none text-white fw-bold"
+                          data-bs-toggle="modal"
+                          data-bs-target="#mymodal"
+                          href="#"
+                          >LOG IN</a
+                        >
+                      </figcaption>
+                    </div>
+                  </div>
+                </section>
+                <section class="image-text">
+                  <span
+                    ><span class="text-primary"
+                      ><i class="bi bi-patch-check-fill"></i
+                    ></span>
+                    Verified Artist</span
+                  >
+                  <h1>Wizkid</h1>
+                  <p>37,120,733 monthly listeners</p>
+                </section>
+              </div>
+              <div class="col-12 artist-page-background-2">
+                <section class="p-4 sub-artist-header">
+                  <div class="d-flex gap-4 align-items-center">
+                    <div class="play-btn artist-page-play"></div>
+                    <button
+                      class="btn btn-outline-secondary bg-transparent rounded"
+                    >
+                      <span class="text-light">FOLLOW</span>
+                    </button>
+                    <p class="text-light fs-4 mb-0">
+                      <i class="bi bi-three-dots"></i>
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <div
+                    class="row mb-5 text-light px-4 artist-page-music-section"
+                  >
+                    <div class="col-12 col-lg-9">
+                      <h2 class="fw-bold fs-4">Popular</h2>
+                      <table class="table-botherless w-100">
+                        <tbody></tbody>
+                      </table>
+                      <!-- <p class="my-3">
+                        <a class="text-decoration-none  fs-6" href="#"
+                          >SEE MORE</a
+                        >
+                      </p> -->
+                      <!-- <section class=" px-3 my-5">
+                        <div
+                          class="d-flex justify-content-between  mb-3"
+                        >
+                          <h2 class="fw-bold fs-5">Popular Releases</h2>
+                          <h4>See all</h4>
+                        </div>
+                        <article class="middle-container popuplar">
+                          <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                              <article class="music-content">
+                                <figure class="position-relative" >
+                                  <img
+                                    src="./img/artist-img/gettyimages-1346819392-612x612.jpg"
+                                    alt="album picture"
+                                    class="img-fluid"
+                                    />
+                                    <div class="play-box">
+                                      <p class="play-btn"></p>
+              
+                                    </div>
+                                </figure>
+  
+                                <figcaption>Burning Jazz-rock...</figcaption>
+                                <p>You'll find Fiery, modern,groovy,jazz-music</p>
+                              </article>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                              <article class="music-content">
+                                <figure class="position-relative" >
+                                  <img
+                                    src="./img/Wizkid-For-Me-ft-Wande-Coal-(JustNaija.com).jpg"
+                                    alt="album picture"
+                                    class="img-fluid"
+                                    />
+                                    <div class="play-box">
+                                      <p class="play-btn"></p>
+              
+                                    </div>
+                                </figure>
+                                <figcaption>Metal Ballads</figcaption>
+                                <p>A collection of the best metal ballads</p>
+                              </article>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                              <article class="music-content">
+                                <figure class="position-relative" >
+                                  <img
+                                    src="./img/Wizkid-Eme-Boyz-ft-Skales-Banky-W-(JustNaija.com).jpg"
+                                    alt="album picture"
+                                    class="img-fluid"
+                                    />
+                                    <div class="play-box">
+                                      <p class="play-btn"></p>
+              
+                                    </div>
+                                </figure>
+                                <figcaption>Metal Ballads</figcaption>
+                                <p>A collection of the best metal ballads</p>
+                              </article>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                              <article class="music-content">
+                                <figure class="position-relative" >
+                                  <img
+                                    src="./img/artist-img/gettyimages-1342638624-612x612.jpg"
+                                    alt="album picture"
+                                    class="img-fluid"
+                                    />
+                                    <div class="play-box">
+                                      <p class="play-btn"></p>
+              
+                                    </div>
+                                </figure>
+                                <figcaption>Metal Ballads</figcaption>
+                                <p>A collection of the best metal ballads</p>
+                              </article>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+                              <article class="music-content">
+                                <figure class="position-relative" >
+                                  <img
+                                    src="./img/Wizkid-Don-t-Dull-(JustNaija.com).jpg"
+                                    alt="album picture"
+                                    class="img-fluid"
+                                    />
+                                    <div class="play-box">
+                                      <p class="play-btn"></p>
+              
+                                    </div>
+                                </figure>
+                                <figcaption>Midian</figcaption>
+                                <p>Cradle of Fifth</p>
+                              </article>
+                            </div>
+                            <div
+                              class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3"
+                            >
+                              <article class="music-content">
+                                <figure class="position-relative" >
+                                  <img
+                                    src="./img/Wizkid-Don-t-Dull-(JustNaija.com).jpg"
+                                    alt="album picture"
+                                    class="img-fluid"
+                                    />
+                                    <div class="play-box">
+                                      <p class="play-btn"></p>
+              
+                                    </div>
+                                </figure>
+                                <figcaption>Liked Songs</figcaption>
+                              </article>
+                            </div>
+                          </div>
+                        </article>
+                      </section> -->
+                    </div>
+                    <!-- <div class="d-none d-lg-block col-lg-3">
+                      <h2 class="fw-bold ">Artist pick</h2>
+                      <div class="d-flex gap-3 align-items-center">
+                        <figure>
+                          <img
+                            class="juice-2-img img-fluid"
+                            src="./img/juice 2.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <p class="text-muted mb-1">
+                            <span><i class="bi bi-music-note-beamed"></i></span>
+                            Posted By Big-Wiz
+                          </p>
+                          <p class="fw-bold  mb-0">
+                            Wizkid Best Of <br />
+                            <span class="text-muted">Playlist</span>
+                          </p>
+                        </figcaption>
+                      </div>
+                    </div> -->
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="container-fluid px-0 music-container text-light d-none">
+          <div class="bg-dark align-items-center p-3">
+            <div class="row align-items-center justify-content-center">
+              <div class="d-none d-md-block col-md-3">
+                <div class="d-flex gap-3 align-items-center">
+                  <figure class="text-muted playing-img-container">
+                    <img
+                      class="playing-img"
+                      src="./img/Wizkid-Don-t-Dull-(JustNaija.com).jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="d-flex flex-column">
+                    <p class="mb-0 music-title">
+                      Another One Bites The Dust - Remastered 2011
+                    </p>
+                    <p class="mb-0"></p>
+                  </div>
+                  <div class="d-flex gap-4">
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-pip"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center"
+                >
+                  <div class="d-flex gap-3 fs-4 align-items-center controls">
+                    <i class="bi bi-shuffle"></i>
+                    <span class="prev"
+                      ><i class="bi bi-skip-start-fill"></i
+                    ></span>
+                    <span class="fs-2 play"
+                      ><i class="bi bi-play-circle"></i
+                    ></span>
+                    <span class="next"
+                      ><i class="bi bi-skip-end-fill"></i
+                    ></span>
+                    <i class="bi bi-arrow-repeat"></i>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center w-100">
+                    <div class="">
+                      <span class="minutes-start"></span>
+                    </div>
+                    <div class="progress-container">
+                      <div class="progress"></div>
+                    </div>
+
+                    <div class="">
+                      <span class="minutes-end"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none d-md-block col-md-3">
+                <div class="d-flex gap-3 align-items-center fs-4 controls">
+                  <i class="bi bi-justify-left"></i>
+                  <i class="bi bi-pc-display"></i>
+                  <div class="d-flex align-items-center gap-1 w-100">
+                    <i class="bi bi-volume-up"></i>
+                    <div class="volume-up-container">
+                      <div class="volume-up-progress"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./artist.js"></script>
+  </body>
+</html>
