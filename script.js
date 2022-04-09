@@ -1,5 +1,16 @@
 `use strict`;
-let query = "wizkid";
+let artistName = [
+  "wizkid",
+  "davido",
+  "olamide",
+  "tekno",
+  "skales",
+  "patoranking",
+  "eminem",
+  "rihanna",
+];
+let randArtistName = artistName[Math.floor(Math.random() * artistName.length)];
+let query = randArtistName;
 const search = (artistName = query) => {
   const musicContainer = document.querySelector(`.middle-container > .row`);
   musicContainer.innerHTML = ``;
@@ -38,22 +49,12 @@ const albumCards = (data) => {
   </article>
   </div>`);
 };
-let artistName = [
-  "wizkid",
-  "davido",
-  "olamide",
-  "tekno",
-  "skales",
-  "patoranking",
-  "eminem",
-  "rihanna",
-];
-let randArtistName = artistName[Math.floor(Math.random() * artistName.length)];
+
 const init = function () {
   HometoDarkMode();
   HometoLightMode();
 
-  search(`${randArtistName}`);
+  search();
 
   randomBackgroundColor();
   document.getElementById(`search-input`).classList.remove(`d-none`);
