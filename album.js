@@ -72,12 +72,9 @@ const loadAlbumPage = () => {
 const load = () => {
   document.querySelectorAll(`.songs`).forEach((song) => {
     song.addEventListener(`click`, function (e) {
-      // console.log(e.target);
       songIndex = parseInt(this.getAttribute(`id`));
-      console.log(songIndex);
       audio.src = songsPreview[songIndex];
       audio.play();
-      // loadSong(songsPreview[songIndex]);
       tbody.querySelectorAll(`tr`).forEach((tr) => {
         if (tr.classList.contains(`text-success`)) {
           tr.classList.remove(`text-success`);

@@ -99,27 +99,31 @@
         <!-- added the main section inside the col below -->
         <!-- * main page below -->
           <div class="col-12 col-sm-9 col-md-10 background all-sections text-white ">
-            <div class="px-5 pb-2">
+            <div class="px-3 px-sm-5 pb-2">
               <section class="mb-5">
                 <div
-                  class="d-flex align-items-center justify-content-between pt-4 pb-5"
+                  class="d-flex align-items-center justify-content-between gap-5 pt-4 pb-5"
                 >
                   <div class="d-none d-sm-block">
                     <span class="arrow"><i class="bi bi-chevron-left"></i></span>
                     <span class="arrow"><i class="bi bi-chevron-right"></i></span>
                   </div>
+                  <div class="input-group d-sm-none">
+                    <input type="text" onkeyup="handleSearhQuery(event)" class="form-control" placeholder="search artist name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-secondary" onclick="search()" type="button" id="button-addon2">Go</button>
+                  </div>
                   <div class="d-flex gap-3 align-items-center">
                     <div class="position-relative" >
-                      <span class="dark-mode d-none"
+                      <div class="dark-mode d-none"
                       ><i class="bi bi-moon-fill"></i></i
                       >
                       <p class="mode">Dark Mode</p>
-                    </span>
+                    </div>
                     
-                    <span class="light-mode "
+                    <div class="light-mode "
                     ><i class="bi bi-brightness-high"></i>
                     <p class="mode">light Mode</p>
-                  </span>
+                  </div>
                     </div>
                     <figure
                       class="d-flex align-items-center gap-2 text-white user-details d-none"

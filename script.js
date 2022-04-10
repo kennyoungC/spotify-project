@@ -66,6 +66,8 @@ const handleSearhQuery = (event) => {
     search();
   }
 };
+const input = document.querySelector(`input.form-control`);
+console.log(input.value);
 const artistPage = document.querySelector(`.artist-page`);
 const albumPage = document.querySelector(`.album-page`);
 const homePage = document.querySelector(`.home-page`);

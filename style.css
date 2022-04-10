@@ -183,6 +183,7 @@ article.middle-container article.music-content:hover > figure .play-box {
   opacity: 1;
 }
 .user-log-in {
+  white-space: nowrap;
   font-size: 28px;
   font-weight: 700;
   padding: 6px;
