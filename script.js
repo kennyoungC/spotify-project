@@ -19,7 +19,9 @@ const search = (artistName = query) => {
   )
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data);
+      // const input = document.querySelector(`input.form-control`);
+      // input.value = "";
+
       data.data.forEach((data) => {
         document.querySelector(`h2`).innerText = data.artist.name;
 
@@ -32,11 +34,13 @@ const albumCards = (data) => {
   return (musicRow = `<div id="${data.album.id}"class="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
   <article class="music-content wizkid-page">
   <figure class="position-relative" >
+  <a href="album.html?id=${data.album.id}">
   <img
   src="${data.album.cover_medium}"
   alt="album picture"
   class="img-fluid"
   />
+  </a>
   <div class="play-box">
   <p class="play-btn"></p>
 
@@ -63,11 +67,12 @@ const init = function () {
 const handleSearhQuery = (event) => {
   query = event.target.value;
   if (query.length > 3 && event.key === "Enter") {
+    const firstRow = document.querySelector(`h1 + article > .row`);
+    firstRow.classList.add(`d-none`);
     search();
   }
 };
-const input = document.querySelector(`input.form-control`);
-console.log(input.value);
+
 const artistPage = document.querySelector(`.artist-page`);
 const albumPage = document.querySelector(`.album-page`);
 const homePage = document.querySelector(`.home-page`);
