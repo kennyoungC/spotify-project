@@ -27,22 +27,26 @@ const loadArtistPage = () => {
     .catch((err) => console.error(err));
 };
 const displayTrackLists = async () => {
-  const response = await fetch(
-    `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`
-  );
-  const userData = await response.json();
-  // console.log(userData.data);
-  const albumCards = document.querySelector(`.album-cards`);
-  const tbody = document.querySelector(`tbody`);
+  try {
+    const response = await fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`
+    );
+    const userData = await response.json();
+    // console.log(userData.data);
+    const albumCards = document.querySelector(`.album-cards`);
+    const tbody = document.querySelector(`tbody`);
 
-  albumCards.innerHTML = ``;
-  tbody.innerHTML = ``;
-  userData.data.forEach((element, i) => {
-    songsPreview.push(element.preview);
-    tbody.innerHTML += displayUsers(element, i);
-    albumCards.innerHTML += displayMusicCard(element);
-    load();
-  });
+    albumCards.innerHTML = ``;
+    tbody.innerHTML = ``;
+    userData.data.forEach((element, i) => {
+      songsPreview.push(element.preview);
+      tbody.innerHTML += displayUsers(element, i);
+      albumCards.innerHTML += displayMusicCard(element);
+      load();
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 const load = () => {
   document.querySelectorAll(`.songs`).forEach((song) => {

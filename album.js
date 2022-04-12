@@ -38,36 +38,75 @@ const loadAlbumPage = () => {
       h2.innerText = data.title;
 
       const tracks = data.tracks.data;
-      // console.log(tracks);
+      console.log(tracks);
+
+      //display song on player
+      document.querySelectorAll(`.songs`).forEach((song) => {
+        song.addEventListener(`click`, function () {
+          setPlayerInfo(tracks);
+          // tbody.querySelectorAll(`tr`).forEach((tr) => {
+          //   if (tr.classList.contains(`text-success`)) {
+          //     tr.classList.remove(`text-success`);
+          //   }
+          // });
+          // song.classList.add(`text-success`);
+          // playSong();
+        });
+      });
+
       tracks.forEach((track, i) => {
         songsPreview.push(track.preview);
-        let songDuration = (track.duration / 60).toFixed(2);
-        let songDurationMain = String(songDuration).split(`.`).join(`:`);
 
-        const newRow = ` <tr id=${i} class="songs">
-        <th scope="row">
-          <span class=""
-            >${i + 1}</span>
-        </th>
-        <td>
-          <div class="d-flex gap-2 align-items-center">
-            
-            <span 
-              >${track.title}</span
-            >
-          </div>
-        </td>
-        <td class="text-start">${track.rank}</td>
-        <td>${songDurationMain}</td>
-      </tr>`;
-        tbody.innerHTML += newRow;
+        tbody.innerHTML += displayRows(track, i);
       });
       load();
     })
     .catch((err) => console.error(err));
 };
+const displayRows = (track, i) => {
+  let songDuration = (track.duration / 60).toFixed(2);
+  let songDurationMain = String(songDuration).split(`.`).join(`:`);
+  return ` <tr id=${i} class="songs" onclick="setPlayerInfo()">
+  <th scope="row">
+    <span class=""
+      >${i + 1}</span>
+  </th>
+  <td>
+    <div class="d-flex gap-2 align-items-center">
+      
+      <span 
+        >${track.title}</span
+      >
+    </div>
+  </td>
+  <td class="text-start">${track.rank}</td>
+  <td>${songDurationMain}</td>
+</tr>`;
+};
+//handle volume
+
+// const handleChangeVolume = (e) => {
+//   // function triggered by the onchange event of the volume's range input
+//   const rangeValue = e.target.value;
+//   console.log(rangeValue);
+//   // const volume = rangeValue / 100;
+
+//   // audio.volume = volume; // affetcs the audio element's volume
+
+//   localStorage.setItem("prevVolume", rangeValue); // set chosen volume value in localStorage for later use
+// };
 
 // Update song details
+const setPlayerInfo = (song) => {
+  // grabbing elemets
+  const musicTitle = document.querySelector(`.music-title`);
+  const playingImage = document.querySelector(`.playing-img`);
+
+  //applying song info to the player
+  // playingImage.src = song.album.cover_small;
+  musicTitle.innerText = song.title_short;
+  audio.src = song.preview;
+};
 const load = () => {
   document.querySelectorAll(`.songs`).forEach((song) => {
     song.addEventListener(`click`, function (e) {
@@ -84,11 +123,7 @@ const load = () => {
     });
   });
 };
-const loadSong = function (song) {
-  // musicTitle.innerText = songsPreview[id];
-  // audio.src = song[index];
-  // cover.src = `./img/Wizkid images/wizkid ${songIndex + 1}.jpg`;
-};
+
 const playSong = function () {
   musicContainer.classList.add(`play`);
   play.querySelector(`i.bi`).classList.remove(`bi-play-circle`);
@@ -105,22 +140,22 @@ const pauseSong = function () {
   bigPlayBtn.classList.remove(`pause-btn`);
   audio.pause();
 };
-const prevSong = function () {
-  songIndex--;
-  if (songIndex < 0) {
-    songIndex = songs.length - 1;
-  }
-  loadSong(songsPreview[songIndex]);
-  playSong();
-};
-const nextSong = function () {
-  songIndex++;
-  if (songIndex > songs.length - 1) {
-    songIndex = 0;
-  }
-  loadSong(songsPreview[songIndex]);
-  playSong();
-};
+// const prevSong = function () {
+//   songIndex--;
+//   if (songIndex < 0) {
+//     songIndex = songs.length - 1;
+//   }
+//   loadSong(songsPreview[songIndex]);
+//   playSong();
+// };
+// const nextSong = function () {
+//   songIndex++;
+//   if (songIndex > songs.length - 1) {
+//     songIndex = 0;
+//   }
+//   loadSong(songsPreview[songIndex]);
+//   playSong();
+// };
 
 const updateProgress = function (e) {
   const movingMinutes = Math.floor(e.srcElement.currentTime);
@@ -158,9 +193,9 @@ play.addEventListener(`click`, function () {
 // change song events
 progressContainer.addEventListener(`click`, setProgress);
 audio.addEventListener(`timeupdate`, updateProgress);
-prev.addEventListener(`click`, prevSong);
-next.addEventListener(`click`, nextSong);
-audio.addEventListener(`ended`, nextSong);
+// prev.addEventListener(`click`, prevSong);
+// next.addEventListener(`click`, nextSong);
+// audio.addEventListener(`ended`, nextSong);
 /* play section
 const WizkidMusicTitles = document.querySelectorAll(`tbody tr figure + span`);
 const tbody = document.querySelector(`tbody`);
@@ -195,31 +230,8 @@ const songs = [
   "What you wanna do",
   "Wiz Party Bonus Freestyle Leak",
 ];
-// creating wizkid's 17 music album
-// for (let i = 0; i < 17; i++) {
-//   tbody.innerHTML += ` <tr class="song" id="${i}">
-//   <th scope="row">${i + 1}</th>
-//   <td>
-//     <div class="d-flex gap-2 align-items-center">
-//       <figure>
-//         <img
-//           class="img-fluid wiz-img"
-//           src="./img/Wizkid images/wizkid ${i + 1}.jpg"
-//           alt=""
-//         />
-//       </figure>
-//       <span>${songs[i]}</span>
-//     </div>
-//   </td>
-//   <td>${randomIntFromInterval(250000 * i, 900000)}</td>
-//   <td class="duration">3:34</td>
-// </tr>`;
-// }
-// generate random number
-function randomIntFromInterval(min, max) {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+
+
 let songIndex = 0;
 document.querySelectorAll(`.song`).forEach((song) => {
   song.addEventListener(`click`, function (e) {
@@ -295,23 +307,4 @@ const setProgress = function (e) {
   console.log(audio.currentTime);
 };
 // Initially load song info DOM
-loadSong(songs[songIndex]);
-
-// event listeners
-play.addEventListener(`click`, function () {
-  const isPlaying = musicContainer.classList.contains(`play`);
-  if (isPlaying) {
-    pauseSong();
-  } else {
-    playSong();
-  }
-});
-
-// change song events
-progressContainer.addEventListener(`click`, setProgress);
-audio.addEventListener(`timeupdate`, updateProgress);
-prev.addEventListener(`click`, prevSong);
-next.addEventListener(`click`, nextSong);
-audio.addEventListener(`ended`, nextSong);
-// bigPlayBtn.addEventListener(`click`, playSong);
-// bigPauseBtn.addEventListener(`click`, pauseSong);*/
+loadSong(songs[songIndex]);*/
