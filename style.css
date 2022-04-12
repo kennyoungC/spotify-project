@@ -103,7 +103,7 @@ article figure img {
 
   /* Needed to make it work */
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   /* width: 190px; */
 }
 .middle-container article figure {
@@ -257,8 +257,12 @@ aside {
 header figure {
   margin-bottom: 1rem;
 }
+header figure:nth-of-type(1) > img.big-img {
+  margin-bottom: 0;
+  width: 285px;
+}
 header figure img {
-  width: 280px;
+  max-width: 100%;
 }
 .min-img img {
   border-radius: 50%;
@@ -394,7 +398,10 @@ input {
   width: 0;
   transition: width 0.1s linear;
 }
-.volume-up-container {
+.volume-box {
+  max-width: 60%;
+}
+/* .volume-up-container {
   background-color: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -408,7 +415,7 @@ input {
   height: 100%;
   width: 50%;
   transition: width 0.1s linear;
-}
+} */
 .play-box {
   position: absolute;
 

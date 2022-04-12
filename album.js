@@ -18,14 +18,13 @@ window.onload = () => {
 let songsPreview = [];
 const loadAlbumPage = () => {
   const id = new URLSearchParams(window.location.search).get("id");
-  console.log(id);
+  // console.log(id);
   const tbody = document.querySelector(`.album-tbody`);
   tbody.innerHTML = ``;
   fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      console.log(data.tracks.data[0].title);
+      // console.log(data);
       const h2 = document.querySelector(`h2`);
       const albumCover = document.querySelector(`.min-img > img`);
       const bigImg = document.querySelector(`.big-img`);
@@ -35,11 +34,11 @@ const loadAlbumPage = () => {
       const slicedDate = `${data.release_date}`.slice(0, 4);
       btNote.innerText = `${slicedDate}•${data.tracks.data.length}songs`;
       bigImg.src = data.cover_big;
-      albumCover.src = data.cover_small;
+      albumCover.src = data.artist.picture;
       h2.innerText = data.title;
 
       const tracks = data.tracks.data;
-      console.log(tracks);
+      // console.log(tracks);
       tracks.forEach((track, i) => {
         songsPreview.push(track.preview);
         let songDuration = (track.duration / 60).toFixed(2);
@@ -144,7 +143,7 @@ const setProgress = function (e) {
   console.log(audio.currentTime);
 };
 // Initially load song info DOM
-loadSong(songsPreview[songIndex]);
+// loadSong(songsPreview[songIndex]);
 
 // event listeners
 play.addEventListener(`click`, function () {
