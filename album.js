@@ -24,7 +24,7 @@ const loadAlbumPage = () => {
   fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
+      console.log(data);
       const h2 = document.querySelector(`h2`);
       const albumCover = document.querySelector(`.min-img > img`);
       const bigImg = document.querySelector(`.big-img`);
@@ -41,23 +41,15 @@ const loadAlbumPage = () => {
       console.log(tracks);
 
       //display song on player
-      document.querySelectorAll(`.songs`).forEach((song) => {
-        song.addEventListener(`click`, function () {
-          setPlayerInfo(tracks);
-          // tbody.querySelectorAll(`tr`).forEach((tr) => {
-          //   if (tr.classList.contains(`text-success`)) {
-          //     tr.classList.remove(`text-success`);
-          //   }
-          // });
-          // song.classList.add(`text-success`);
-          // playSong();
-        });
-      });
+      setPlayerInfo(tracks);
 
       tracks.forEach((track, i) => {
         songsPreview.push(track.preview);
 
         tbody.innerHTML += displayRows(track, i);
+        document.querySelectorAll(`.songs`).forEach((song) => {
+          song.addEventListener(`click`, function () {});
+        });
       });
       load();
     })
@@ -66,7 +58,7 @@ const loadAlbumPage = () => {
 const displayRows = (track, i) => {
   let songDuration = (track.duration / 60).toFixed(2);
   let songDurationMain = String(songDuration).split(`.`).join(`:`);
-  return ` <tr id=${i} class="songs" onclick="setPlayerInfo()">
+  return ` <tr id=${i} class="songs"   >
   <th scope="row">
     <span class=""
       >${i + 1}</span>
